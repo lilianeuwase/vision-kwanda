@@ -1,20 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homepage";
+import ScrollToTop from "./components/scrollToTop";
+import Gemstones from "./components/gemstones/gemstones";
+import { ChakraProvider } from "@chakra-ui/react";
+import { system } from "@chakra-ui/react/preset";
+import Example from "./components/homepage/tbu";
+import { Footer } from "./components/footer";
 
 function App() {
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimate(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className={`container ${animate ? 'animate' : ''}`}>
-      <h1>hi</h1>
-    </div>
+    <ChakraProvider value={system} >
+    <Router>
+    {/* <Header/> */}
+    <ScrollToTop>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gemstones" element={<Gemstones />} />
+          <Route path="/view" element={<Example />} />
+        </Routes>
+      </div>
+      </ScrollToTop>
+    </Router>
+    <Footer/>
+    </ChakraProvider>
   );
 }
 
