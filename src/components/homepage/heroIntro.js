@@ -1,7 +1,7 @@
 import { Box, Image, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Header from "../header"; // Adjust the import path as needed
+import Header from "../navbar"; // Adjust the import path as needed
 import myImage from "../../assets/MiningHome.jpg"; // Ensure your image is placed in the assets folder
 import "../../styles/services/overlayIntro.css"
 
@@ -109,7 +109,7 @@ const HeroIntro = () => {
                 ENVIRONMENTAL{" "}
                 <span
                   style={{
-                    backgroundColor: "#BB4430",
+                    backgroundColor: "#09BC8A",
                     padding: "0 4px",
                   }}
                 >

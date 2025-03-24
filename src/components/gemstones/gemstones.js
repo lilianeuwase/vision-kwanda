@@ -8,7 +8,7 @@ import {
   useGLTF,
   Line,
 } from "@react-three/drei";
-import Header from "../header";
+import Header from "../navbar";
 
 // RotatingModel auto-rotates when not dragging, and allows custom rotations via pointer events.
 function RotatingModel({

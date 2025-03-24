@@ -1,6 +1,6 @@
 export const HomeSteps = () => {
   return (
-    <div className="mx-auto bg-[#f3d3ce] lg:py-20">
+    <div className="mx-auto bg-green-50 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -49,7 +49,7 @@ export const HomeSteps = () => {
         <div className="relative text-center">
           <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg
-              className="w-12 h-12 text-[#BB4430] sm:w-16 sm:h-16"
+              className="w-12 h-12 text-green-500 sm:w-16 sm:h-16"
               stroke="currentColor"
               viewBox="0 0 52 52"
             >
@@ -98,7 +98,7 @@ export const HomeSteps = () => {
         <div className="relative text-center">
           <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg
-              className="w-12 h-12 text-[#BB4430] sm:w-16 sm:h-16"
+              className="w-12 h-12 text-green-500 sm:w-16 sm:h-16"
               stroke="currentColor"
               viewBox="0 0 52 52"
             >
@@ -147,7 +147,7 @@ export const HomeSteps = () => {
         <div className="relative text-center">
           <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg
-              className="w-12 h-12 text-[#BB4430] sm:w-16 sm:h-16"
+              className="w-12 h-12 text-green-500 sm:w-16 sm:h-16"
               stroke="currentColor"
               viewBox="0 0 52 52"
             >

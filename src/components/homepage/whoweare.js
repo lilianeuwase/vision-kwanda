@@ -51,7 +51,7 @@ export const WhoWeAre = () => {
               Let us handle
               <br className="hidden md:block" />
               your next{" "}
-              <span className="inline-block text-[#BB4430]">adventure</span>
+              <span className="inline-block text-green-500">adventure</span>
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
               Vision Kwanda Group Ltd is the company operating in Rwanda and an

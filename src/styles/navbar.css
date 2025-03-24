@@ -35,7 +35,7 @@
     /* highlight covers 80% of the text width from the right */
     height: 36%;
     /* 60% of the text’s height reduced by 40% */
-    background-color: #BB4430;
+    background-color: #09BC8A;
     z-index: -1;
     /* keep it behind the text */
     transform: scaleX(0);

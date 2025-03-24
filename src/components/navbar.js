@@ -2,12 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Dialog, PopoverGroup, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-import "../styles/header.css"; // Ensure this file includes the custom CSS below
+import "../styles/navbar.css"; // Ensure this file includes the custom CSS below
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,6 +11,7 @@ export default function Navbar() {
   // Listen to scroll events to toggle header background
   useEffect(() => {
     const handleScroll = () => {
+      console.log("scrollY:", window.scrollY);
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -34,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-[#ffffff] shadow-lg" : "bg-transparent"
       }`}
     >
       <nav
@@ -42,7 +38,7 @@ export default function Navbar() {
         className="flex items-center justify-between p-6 lg:px-8"
       >
         {/* Logo & Text */}
-        <div className="flex lg:flex-1 -m-1.5 p-1.5 text-[#cc4e38] font-bold navbar-logo items-end">
+        <div className="flex lg:flex-1 -m-1.5 p-1.5 text-green-500 font-bold navbar-logo items-end">
           <img
             className="h-8 w-auto"
             src={require("../assets/LOGOVision-removebg.png")}
@@ -113,8 +109,10 @@ export default function Navbar() {
             to="/contactus"
             className={({ isActive }) =>
               `rounded-md py-2 px-4 font-semibold transition duration-200 ${
-                isActive ? "bg-white text-[#BB4430]" : "bg-[#BB4430] text-white"
-              } hover:bg-white hover:text-[#BB4430]`
+                isActive
+                  ? "bg-white text-green-500"
+                  : "bg-green-500 text-white"
+              } hover:bg-white hover:text-green-500`
             }
           >
             Contact Us
@@ -134,7 +132,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="-m-1.5 p-1.5 text-indigo-800 font-bold navbar-logo"
+              className="-m-1.5 p-1.5 text-green-500 font-bold navbar-logo"
             >
               <img
                 className="h-8 w-auto absolute left-16"

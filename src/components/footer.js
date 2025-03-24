@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
-    <div className="relative mt-16 bg-[#BB4430]">
+    <div className="relative mt-16 bg-green-500">
       <svg
-        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-[#BB4430]"
+        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-green-500"
         preserveAspectRatio="none"
         viewBox="0 0 1440 54"
       >
@@ -33,7 +33,7 @@ export const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-semibold tracking-wide text-[#f3dfa2]">
+              <p className="font-semibold tracking-wide text-orange-500">
                 Menu
               </p>
               <ul className="mt-2 space-y-2">
@@ -61,11 +61,10 @@ export const Footer = () => {
                     Gemstones
                   </a>
                 </li>
-                
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-[#f3dfa2]">
+              <p className="font-semibold tracking-wide text-orange-500">
                 Sponsors
               </p>
               <ul className="mt-2 space-y-2">
@@ -93,12 +92,10 @@ export const Footer = () => {
                     Business
                   </a>
                 </li>
-                
-                
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-[#f3dfa2]">
+              <p className="font-semibold tracking-wide text-orange-500">
                 Partners
               </p>
               <ul className="mt-2 space-y-2">
@@ -126,11 +123,10 @@ export const Footer = () => {
                     Nonprofit
                   </a>
                 </li>
-                
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-[#f3dfa2]">
+              <p className="font-semibold tracking-wide text-orange-500">
                 Business
               </p>
               <ul className="mt-2 space-y-2">
@@ -158,7 +154,6 @@ export const Footer = () => {
                     Wiki
                   </a>
                 </li>
-               
               </ul>
             </div>
           </div>
