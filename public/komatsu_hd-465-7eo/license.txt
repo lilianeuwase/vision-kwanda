@@ -1,0 +1,11 @@
+Model Information:
+* title:	KOMATSU HD-465-7EO
+* source:	https://sketchfab.com/3d-models/komatsu-hd-465-7eo-2bf4dcd62e484f01bcb446af263bd65c
+* author:	drcrazzie (https://sketchfab.com/drcrazzie)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "KOMATSU HD-465-7EO" (https://sketchfab.com/3d-models/komatsu-hd-465-7eo-2bf4dcd62e484f01bcb446af263bd65c) by drcrazzie (https://sketchfab.com/drcrazzie) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

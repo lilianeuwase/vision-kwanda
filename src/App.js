@@ -8,6 +8,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { system } from "@chakra-ui/react/preset";
 import Example from "./components/homepage/tbu";
 import { Footer } from "./components/footer";
+import Services from "./pages/services";
+import About from "./pages/about";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/gemstones" element={<Gemstones />} />
           <Route path="/view" element={<Example />} />
         </Routes>

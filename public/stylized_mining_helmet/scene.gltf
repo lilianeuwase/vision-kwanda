@@ -1,0 +1,474 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 8107,
+      "max": [
+        94.15229034423828,
+        88.18852233886719,
+        189.68170166015625
+      ],
+      "min": [
+        -96.86337280273438,
+        2.2938108444213867,
+        55.290199279785156
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 97284,
+      "componentType": 5126,
+      "count": 8107,
+      "max": [
+        0.9999922513961792,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999504685401917,
+        -1.0,
+        -0.9999977946281433
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 8107,
+      "max": [
+        0.9999996423721313,
+        0.9998363256454468,
+        0.9999984502792358,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999788403511047,
+        -0.9999999403953552,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 8107,
+      "max": [
+        0.9892613291740417,
+        0.9817222952842712
+      ],
+      "min": [
+        0.009768112562596798,
+        0.003085954114794731
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 41568,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 194568,
+      "componentType": 5126,
+      "count": 980,
+      "max": [
+        -81.71195983886719,
+        40.786460876464844,
+        124.77894592285156
+      ],
+      "min": [
+        -87.12537384033203,
+        30.799610137939453,
+        120.96784973144531
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 206328,
+      "componentType": 5126,
+      "count": 980,
+      "max": [
+        0.999121367931366,
+        0.9927007555961609,
+        0.999028205871582
+      ],
+      "min": [
+        -0.998891294002533,
+        -0.9735628962516785,
+        -0.9993929862976074
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 129712,
+      "componentType": 5126,
+      "count": 980,
+      "max": [
+        0.999194860458374,
+        0.9970230460166931,
+        0.9951630234718323,
+        1.0
+      ],
+      "min": [
+        -0.9990684986114502,
+        -0.9991770386695862,
+        -0.9987120032310486,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 64856,
+      "componentType": 5126,
+      "count": 980,
+      "max": [
+        0.33115482330322266,
+        0.3228989541530609
+      ],
+      "min": [
+        0.04414787143468857,
+        0.032309360802173615
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 166272,
+      "componentType": 5125,
+      "count": 4428,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "bradacvojtech (https://sketchfab.com/bradacvojtech)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/stylized-mining-helmet-e41a9078dc7941ec9c666bf3536a674c",
+      "title": "Stylized Mining Helmet"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 183984,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72696,
+      "byteOffset": 183984,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 218088,
+      "byteOffset": 256680,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 145392,
+      "byteOffset": 474768,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 620160,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/helmet_baseColor.png"
+    },
+    {
+      "uri": "textures/helmet_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/helmet_emissive.png"
+    },
+    {
+      "uri": "textures/helmet_normal.png"
+    },
+    {
+      "uri": "textures/flame_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/flame_emissive.jpeg"
+    },
+    {
+      "uri": "textures/flame_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 2
+      },
+      "name": "helmet",
+      "normalTexture": {
+        "index": 3
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 5
+      },
+      "name": "flame",
+      "normalTexture": {
+        "index": 6
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.0,
+          0.0,
+          0.9438900397
+        ],
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "helmet1_helmet_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "flame1_flame_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "0643713825a84682b48b3caadc5abd9b.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -122.53837585449219,
+        1.0
+      ],
+      "name": "helmet1"
+    },
+    {
+      "mesh": 0,
+      "name": "helmet1_helmet_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.2483322620391846,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2483322620391846,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2483322620391846,
+        0.0,
+        21.0075626373291,
+        -7.826477527618408,
+        -153.07981872558594,
+        1.0
+      ],
+      "name": "flame1"
+    },
+    {
+      "mesh": 1,
+      "name": "flame1_flame_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 import { Box, Image, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Header from "../navbar"; // Adjust the import path as needed
+import Navbar from "../navbar"; // Adjust the import path as needed
 import myImage from "../../assets/MiningHome.jpg"; // Ensure your image is placed in the assets folder
-import "../../styles/services/overlayIntro.css"
+import "../../styles/services/overlayIntro.css";
+import { Link, NavLink } from "react-router-dom";
 
 const MotionBox = motion(Box);
 const MotionDiv = motion.div;
@@ -88,7 +89,7 @@ const HeroIntro = () => {
               zIndex: 10,
             }}
           >
-            <Header />
+            <Navbar />
           </MotionDiv>
           {/* Hero Text on the left white side */}
           <MotionDiv
@@ -119,13 +120,14 @@ const HeroIntro = () => {
               {/* Hero content fades in after the image appears */}
               <div className={`hero-content ${showContent ? "visible" : ""}`}>
                 <h2>Mining, Quarry, Environmental, Health and Safety </h2>
-                
                 <p>
-                  Empowering Mining Engineering, Environmental, Health and Safety
-                  Services; A Benchmark to the Sustainable Development of the Rwandan
-                  mining Sector
+                  Empowering Mining Engineering, Environmental, Health and
+                  Safety Services; A Benchmark to the Sustainable Development of
+                  the Rwandan mining Sector
                 </p>
-                 <Button size="lg" >About Us</Button>
+                <Link to="/aboutus" style={{ textDecoration: "none" }}>
+                  <Button size="lg">About Us</Button>
+                </Link>
               </div>
             </div>
           </MotionDiv>

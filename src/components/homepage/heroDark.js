@@ -1,7 +1,7 @@
 export default function HeroDark() {
   return (
     <div className="mx-auto">
-      <div className="relative isolate overflow-hidden bg-[#0F4D0F] px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+      <div className="relative isolate overflow-hidden bg-[#09BC8A] px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
         <svg
           viewBox="0 0 1024 1024"
           aria-hidden="true"
@@ -23,9 +23,9 @@ export default function HeroDark() {
         </svg>
         <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
           <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
-            Boost your productivity. Start using our services TODAY
+            Boost your productivity. <br />Start using our services TODAY
           </h2>
-          <p className="mt-6 text-lg/8 text-pretty text-gray-300">
+          <p className="mt-6 text-lg/8 text-pretty text-white-10">
             Our business model is based on providing mining engineering,
             environmental management and conservation, health and safety
             services, real estates and construction services in line with our
@@ -33,12 +33,12 @@ export default function HeroDark() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
             <a
-              href="#"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              href="/team"
+              className="rounded-md bg-white-10 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Our Team
             </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
+            <a href="/gemstones" className="text-sm/6 font-semibold text-white">
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>

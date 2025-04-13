@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/homepage/overlayIntro.css";
-import { Link, NavLink } from "react-router-dom";
-import { Dialog, PopoverGroup, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import "../../styles/services/overlayIntro.css";
 
 function OverlayIntro() {
   const [animate, setAnimate] = useState(false);

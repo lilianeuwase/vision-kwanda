@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-[#ffffff] shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white-10 shadow-lg" : "bg-transparent"
       }`}
     >
       <nav
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Logo & Text */}
         <div className="flex lg:flex-1 -m-1.5 p-1.5 text-green-500 font-bold navbar-logo items-end">
           <img
-            className="h-8 w-auto"
+            className="h-10 w-auto"
             src={require("../assets/LOGOVision-removebg.png")}
             alt=""
           />
@@ -110,9 +110,9 @@ export default function Navbar() {
             className={({ isActive }) =>
               `rounded-md py-2 px-4 font-semibold transition duration-200 ${
                 isActive
-                  ? "bg-white text-green-500"
-                  : "bg-green-500 text-white"
-              } hover:bg-white hover:text-green-500`
+                  ? "bg-white-10 text-green-500"
+                  : "bg-green-500 text-white-10"
+              } hover:bg-white-10 hover:text-green-500`
             }
           >
             Contact Us
@@ -128,7 +128,7 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white-10 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link
               to="/"
