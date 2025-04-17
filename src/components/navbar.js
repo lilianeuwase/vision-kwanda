@@ -44,7 +44,7 @@ export default function Navbar() {
             src={require("../assets/LOGOVision-removebg.png")}
             alt=""
           />
-          VISION KWANDA GROUP.
+         MINING ACCESS WINDOW RWANDA.
         </div>
         <div className="flex lg:hidden">
           <button

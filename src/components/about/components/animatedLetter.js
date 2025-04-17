@@ -12,13 +12,13 @@ const AnimatedLetter = forwardRef(({
   collapseDx = 0
 }, ref) => {
   const controls = useAnimation();
-  const isO = letter.toLowerCase() === "o";
+  const isO = letter.toLowerCase() === "i";
 
   // Phase 1: reveal + O‑jump
   useEffect(() => {
     async function sequence() {
       await controls.start({
-        y: 0,
+        y: -100,
         opacity: 1,
         clipPath: "inset(0 0 0 0)",
         transition: { duration: 0.5, ease: "easeOut", delay }
