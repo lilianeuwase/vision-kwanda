@@ -32,7 +32,7 @@ export default function AboutText() {
     const from = startDelay + i * segment;
     const to   = startDelay + (i + 1) * segment;
     const prog = useTransform(scrollYProgress, [from, to], [0, 1]);
-    return useTransform(prog, [0, 1], ["#6B7280", "#111827"]);
+    return useTransform(prog, [0, 1], ["#9fdfc3", "#111827"]);
   });
 
   return (
