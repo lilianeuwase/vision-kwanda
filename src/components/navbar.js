@@ -38,13 +38,13 @@ export default function Navbar() {
         className="flex items-center justify-between p-6 lg:px-8"
       >
         {/* Logo & Text */}
-        <div className="flex lg:flex-1 -m-1.5 p-1.5 text-green-500 font-bold navbar-logo items-end">
+        <div className="flex lg:flex-1 -m-1.5 p-1.5 text-green-500 font-bold navbar-logo items-center">
           <img
-            className="h-10 w-auto"
-            src={require("../assets/LOGOVision-removebg.png")}
+            className="h-16 w-auto"
+            src={require("../assets/LogoNBG.png")}
             alt=""
           />
-         MINING ACCESS WINDOW RWANDA.
+          <span className="ml-2">MINING ACCESS WINDOW RWANDA.</span>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -134,12 +134,12 @@ export default function Navbar() {
               to="/"
               className="-m-1.5 p-1.5 text-green-500 font-bold navbar-logo"
             >
-              <img
-                className="h-8 w-auto absolute left-16"
-                src={require("../assets/LOGOVision-removebg.png")}
+              {/* <img
+                className="h-4 w-auto absolute left-16"
+                src={require("../assets/LogoNBG.png")}
                 alt=""
-              />
-              VISION KWANDA GROUP.
+              /> */}
+              MINING ACCESS WINDOW RWANDA.
             </Link>
             <button
               type="button"

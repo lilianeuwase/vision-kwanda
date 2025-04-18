@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../navbar";
 import { Box } from "@chakra-ui/react";
-import { motion, useViewportScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import AnimatedText from "./components/animatedText";
 import AppearText from "./components/appearText";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -10,7 +10,7 @@ import { useGLTF } from "@react-three/drei";
 const MotionBox = motion(Box);
 
 const AboutIntro = () => {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const headerY = useTransform(scrollY, [0, 200], [100, 10]);
 
   const [collapseTop, setCollapseTop] = useState(false);
