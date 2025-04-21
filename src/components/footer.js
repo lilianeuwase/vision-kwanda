@@ -21,7 +21,7 @@ export const Footer = () => {
                 src={require("../assets/LOGOVision-removebg.png")}
                 alt=""
               />
-              VISION KWANDA GROUP.
+              MINING ACCESS WINDOW RWANDA.
             </div>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-white">
@@ -160,8 +160,10 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
           <p className="text-sm text-white">
-            © Copyright 2020 Lorem Inc. All rights reserved.
+            © Copyright {new Date().getFullYear()} Mining Access Window Rwanda
+            All rights reserved.
           </p>
+
           <div className="flex items-center mt-4 space-x-4 sm:mt-0">
             <a
               href="/"
@@ -189,6 +191,19 @@ export const Footer = () => {
               </svg>
             </a>
           </div>
+        </div>
+        <div className="flex flex-col justify-between pb-10 sm:flex-row">
+          <p className="text-sm text-white">
+            This website was designed & developed by{" "}
+            <a
+              href="https://8linescode.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              8 Lines Code
+            </a>
+          </p>
         </div>
       </div>
     </div>

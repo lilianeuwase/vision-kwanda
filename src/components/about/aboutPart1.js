@@ -1,40 +1,50 @@
 import React, { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
-// Variants for items (you can keep these if you still want the fade‑in)
+// Variants for items (fade-in)
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
 
 export const AboutPart1 = () => {
-  // In‑view options (unchanged)
+  // In-view options
   const thresholdOptions = {
     rootMargin: "-50% 0px -50% 0px",
     threshold: 0,
     triggerOnce: false,
   };
 
-  // Refs & in‑view states for the image/block items
+  // Image ref & in-view state
   const imgRef = useRef(null);
   const imgInView = useInView(imgRef, thresholdOptions);
 
-  // -- NEW: ref for the whole text content and scroll progress
+  // Grayscale -> color effect
+  const { scrollYProgress: imgScroll } = useScroll({
+    target: imgRef,
+    offset: ["start end", "end start"],
+  });
+  const grayFilter = useTransform(
+    imgScroll,
+    [0.2, 0.5],
+    ["grayscale(100%)", "grayscale(0%)"]
+  );
+
+  // Content scroll for Y movement
   const contentRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: contentRef,
-    // when the top of content hits bottom of viewport → when bottom of content hits top
     offset: ["start end", "end start"],
   });
-  // map [0,1] → [50, -50] (you can tweak these numbers)
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
     <div className="bg-gray-200 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8">
       <div className="flex flex-col max-w-screen-xl overflow-hidden bg-gray-200 border rounded shadow-sm lg:flex-row sm:mx-auto">
-        {/* Image block (same as before) */}
+        {/* Image block with grayscale to color */}
         <motion.div
           ref={imgRef}
+          style={{ filter: grayFilter, WebkitFilter: grayFilter }}
           initial="hidden"
           animate={imgInView ? "visible" : "hidden"}
           variants={itemVariants}
@@ -51,11 +61,11 @@ export const AboutPart1 = () => {
             viewBox="0 0 20 104"
             fill="currentColor"
           >
-            <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
+            <polygon points="17.3036738 0 20 0 20 104 0.824555778 104" />
           </svg>
         </motion.div>
 
-        {/* Content block with scroll‑linked Y movement */}
+        {/* Content block with scroll-linked Y movement */}
         <motion.div
           ref={contentRef}
           style={{ y }}
@@ -63,7 +73,6 @@ export const AboutPart1 = () => {
         >
           {/* Badge */}
           <motion.div
-            ref={(el) => {} /* you can remove the old badgeRef if you want */}
             initial="hidden"
             animate="visible"
             variants={itemVariants}
