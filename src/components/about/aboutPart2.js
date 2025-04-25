@@ -1,20 +1,25 @@
 import React, { useRef } from "react";
 import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
+  BeakerIcon,
+  GlobeAltIcon,
+  PhotoIcon,
+  PresentationChartBarIcon,
+  ScaleIcon,
+  SwatchIcon,
+  ArrowsPointingInIcon,
+  CircleStackIcon,
 } from "@heroicons/react/20/solid";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const features = [
-  { name: "Mineral Processing", icon: CloudArrowUpIcon },
-  { name: "Ventilation Services", icon: LockClosedIcon },
-  { name: "Land reclamation", icon: ServerIcon },
-  { name: "Material handling", icon: ServerIcon },
-  { name: "Environmental projects", icon: ServerIcon },
-  { name: "Consultancy services", icon: ServerIcon },
-  { name: "Power generation", icon: ServerIcon },
-  { name: "Installations", icon: ServerIcon },
+  { name: "Mineral Processing", icon: BeakerIcon },
+  { name: "Ventilation Services", icon: PresentationChartBarIcon },
+  { name: "Land reclamation", icon: PhotoIcon },
+  { name: "Material handling", icon: SwatchIcon },
+  { name: "Environmental projects", icon: GlobeAltIcon },
+  { name: "Consultancy services", icon: ScaleIcon },
+  { name: "Power generation", icon: ArrowsPointingInIcon },
+  { name: "Installations", icon: CircleStackIcon },
 ];
 
 // simple fade & slide-up
@@ -42,7 +47,7 @@ export default function AboutPart2() {
   return (
     <div className="overflow-hidden bg-gray-200 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="items-center mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {/* 1. TEXT SIDE */}
           <motion.div ref={textRef} style={{ y }} className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
@@ -90,7 +95,7 @@ export default function AboutPart2() {
                 viewport={{ once: false, margin: "-25% 0px -25% 0px" }}
                 variants={itemVariants}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="mt-10 max-w-xl text-base/7 text-gray-600 lg:max-w-none grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8"
+                className="mt-10 max-w-xl text-base/7 text-gray-600 lg:max-w-none grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5"
               >
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
@@ -117,7 +122,7 @@ export default function AboutPart2() {
             src={require("../../assets/miningpart1.jpg")}
             width={2432}
             height={1442}
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            className="object-cover w-[48rem] h-[38rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
           />
         </div>
       </div>

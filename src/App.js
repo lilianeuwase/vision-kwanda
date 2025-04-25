@@ -10,6 +10,8 @@ import Example from "./components/homepage/tbu";
 import { Footer } from "./components/footer";
 import Services from "./pages/services";
 import About from "./pages/about";
+import Partners from "./components/partners";
+import TeamPage from "./pages/teamPage";
 
 function App() {
   return (
@@ -23,11 +25,13 @@ function App() {
           <Route path="/aboutus" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gemstones" element={<Gemstones />} />
+          <Route path="/team" element={<TeamPage />} />
           <Route path="/view" element={<Example />} />
         </Routes>
       </div>
       </ScrollToTop>
     </Router>
+    <Partners/>
     <Footer/>
     </ChakraProvider>
   );

@@ -11,3 +11,30 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+
+/* globals.css */
+
+
+/* Hide scrollbars in all major browsers */
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}

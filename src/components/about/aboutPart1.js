@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { Box } from "@chakra-ui/react";
 
 // Variants for items (fade-in)
 const itemVariants = {
@@ -39,9 +40,9 @@ export const AboutPart1 = () => {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <div className="bg-gray-200 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8">
-      <div className="flex flex-col max-w-screen-xl overflow-hidden bg-gray-200 border rounded shadow-sm lg:flex-row sm:mx-auto">
-        {/* Image block with grayscale to color */}
+    <div className="bg-gray-200">
+      <div className="flex flex-col lg:flex-row h-screen">
+        {/* Image block filling left half */}
         <motion.div
           ref={imgRef}
           style={{ filter: grayFilter, WebkitFilter: grayFilter }}
@@ -49,12 +50,12 @@ export const AboutPart1 = () => {
           animate={imgInView ? "visible" : "hidden"}
           variants={itemVariants}
           transition={{ duration: 0.6 }}
-          className="relative lg:w-1/2"
+          className="relative w-full lg:w-1/2 h-80 lg:h-full overflow-hidden"
         >
           <img
-            src={require("../../assets/truck.jpg")}
-            alt=""
-            className="object-cover w-full lg:absolute h-80 lg:h-full"
+            src={require("../../assets/teamunderground2.jpg")}
+            alt="Mining Team Underground"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <svg
             className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
@@ -69,7 +70,7 @@ export const AboutPart1 = () => {
         <motion.div
           ref={contentRef}
           style={{ y }}
-          className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2"
+          className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 w-full lg:w-1/2 overflow-auto"
         >
           {/* Badge */}
           <motion.div
@@ -103,7 +104,7 @@ export const AboutPart1 = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-5 text-gray-800 text-lg"
           >
-            <span className="font-bold">Mining Access Window Rwanda Ltd {" "}</span>
+            <span className="font-bold">Mining Access Window Rwanda Ltd </span>
             has been established as a key player in our regional mining sector,
             with ambitions that extend to the global stage. Our business model
             is centered on delivering mining engineering services aimed at
@@ -124,13 +125,16 @@ export const AboutPart1 = () => {
               className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
               Our Services
-              <svg
-                className="inline-block w-3 ml-2"
+              <Box
+                as="svg"
                 fill="currentColor"
                 viewBox="0 0 12 12"
+                color="green.500"
+                w={3}
+                ml={2}
               >
                 <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-              </svg>
+              </Box>
             </a>
           </motion.div>
         </motion.div>

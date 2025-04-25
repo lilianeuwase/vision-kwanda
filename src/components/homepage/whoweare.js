@@ -48,15 +48,21 @@ export const WhoWeAre = () => {
           </div>
           <div className="max-w-xl mb-6">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Let us handle
-              <br className="hidden md:block" />
-              your next{" "}
-              <span className="inline-block text-green-500">adventure</span>
+              Our{" "}
+              <span className="inline-block bg-gradient-to-r from-[#7cd3b0] to-[#1d795a] bg-clip-text text-transparent">
+                Mission{" "}
+              </span>
+              {/* {" "}
+              <br />&{" "}
+              <span className="inline-block bg-gradient-to-r from-[#7cd3b0] to-[#1d795a] bg-clip-text text-transparent">
+                Goal{" "}
+              </span> */}
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Vision Kwanda Group Ltd is the company operating in Rwanda and an
-              extensive vision to extend our services towards working in our
-              regional area and global scale.
+              To provide expert consultancy services that enhance mining
+              operations while promoting environmentally sustainable
+              practices driven by cutting edge science, regulatory compliance,
+              and meaningful stakeholder collaboration.
             </p>
           </div>
           <div>{/* Additional content if needed */}</div>

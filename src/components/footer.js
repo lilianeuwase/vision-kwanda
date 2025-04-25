@@ -15,13 +15,13 @@ export const Footer = () => {
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             {/* Logo & Text */}
-            <div className="flex lg:flex-1 -m-1.5 p-1.5 text-[#ffff] font-bold navbar-logo items-end">
+            <div className="flex lg:flex-1 -m-1.5 p-1.5 text-[#ffff] font-bold navbar-logo items-center">
               <img
-                className="h-8 w-auto"
-                src={require("../assets/LOGOVision-removebg.png")}
+                className="h-12 w-auto"
+                src={require("../assets/LogoNBG.png")}
                 alt=""
               />
-              MINING ACCESS WINDOW RWANDA.
+              <span className="ml-2">MINING ACCESS WINDOW RWANDA</span>
             </div>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-white">
@@ -160,7 +160,7 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
           <p className="text-sm text-white">
-            © Copyright {new Date().getFullYear()} Mining Access Window Rwanda
+            © Copyright {new Date().getFullYear()}. Mining Access Window Rwanda
             All rights reserved.
           </p>
 

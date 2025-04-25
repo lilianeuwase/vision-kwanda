@@ -13,6 +13,9 @@ const AboutIntro = () => {
   const { scrollY } = useScroll();
   const headerY = useTransform(scrollY, [0, 200], [100, 10]);
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
+
   const [collapseTop, setCollapseTop] = useState(false);
   const [collapseBottom, setCollapseBottom] = useState(false);
   const [appearStage, setAppearStage] = useState(false);
@@ -20,6 +23,19 @@ const AboutIntro = () => {
 
   const oRef = useRef(null);
   const uRef = useRef(null);
+
+  // hide on scroll down, show on scroll up
+  useEffect(() => {
+    const unsubscribe = scrollY.onChange((currentY) => {
+      if (currentY > lastScrollY.current) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      lastScrollY.current = currentY;
+    });
+    return unsubscribe;
+  }, [scrollY]);
 
   // Collapse animation timing
   useEffect(() => {
@@ -43,9 +59,8 @@ const AboutIntro = () => {
 
   return (
     <>
-      {/* Navbar fades in immediately after modelStage */}
       <AnimatePresence>
-        {modelStage && (
+        {modelStage && showNavbar && (
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -58,14 +73,8 @@ const AboutIntro = () => {
         )}
       </AnimatePresence>
 
-      <Box
-        id="hero"
-        className="relative w-full h-screen bg-gray-200 overflow-hidden"
-      >
-        <MotionBox
-          style={{ y: headerY }}
-          className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
-        >
+      <Box id="hero" className="relative w-full h-screen bg-gray-200 overflow-hidden">
+        <MotionBox style={{ y: headerY }} className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           {/* Top line */}
           <div className="relative overflow-visible pt-12">
             <AnimatedText
@@ -79,10 +88,8 @@ const AboutIntro = () => {
               keyLetterIndex={1}
               keyRef={oRef}
             />
-            
             <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
           </div>
-
           {/* Bottom line */}
           <div className="relative overflow-visible mt-8">
             <AnimatedText
@@ -100,7 +107,6 @@ const AboutIntro = () => {
           </div>
         </MotionBox>
 
-        {/* Appear overlay: letters fly out */}
         {appearStage && (
           <MotionBox
             initial={{ opacity: 0 }}
@@ -130,7 +136,6 @@ const AboutIntro = () => {
               />
               <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
             </div>
-
             {/* US */}
             <div className="relative overflow-visible mt-8">
               <AppearText
@@ -142,7 +147,7 @@ const AboutIntro = () => {
                 keyRef={uRef}
                 yOffset={100}
               />
-                  <AppearText
+              <AppearText
                 text="OM"
                 className="text-7xl md:text-9xl uppercase tracking-widest font-semibold mr-[650px]"
                 delay={0.5}
@@ -156,7 +161,6 @@ const AboutIntro = () => {
           </MotionBox>
         )}
 
-        {/* 3D Model Transition */}
         {modelStage && (
           <MotionBox
             initial={{ opacity: 0, y: "-100vh" }}
@@ -204,4 +208,5 @@ function Model(props) {
   return <primitive ref={ref} object={scene} scale={[0.3, 0.3, 0.3]} {...props} />;
 }
 
+// <-- MISSING CLOSING QUOTE ADDED HERE
 useGLTF.preload("/komatsu_hd-465-7eo/scene.gltf");

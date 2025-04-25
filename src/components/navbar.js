@@ -110,9 +110,9 @@ export default function Navbar() {
             className={({ isActive }) =>
               `rounded-md py-2 px-4 font-semibold transition duration-200 ${
                 isActive
-                  ? "bg-white-10 text-green-500"
-                  : "bg-green-500 text-white-10"
-              } hover:bg-white-10 hover:text-green-500`
+                  ? "bg-white-10 text-yellow-500"
+                  : "bg-yellow-500 text-white-10"
+              } hover:bg-yellow-600 hover:text-white-10`
             }
           >
             Contact Us
