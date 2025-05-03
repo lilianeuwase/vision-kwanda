@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Navbar from "../navbar"; // Adjust the import path as needed
 import myImage from "../../assets/MiningHome.jpg"; // Ensure your image is placed in the assets folder
-import "../../styles/services/overlayIntro.css";
-import { Link, NavLink } from "react-router-dom";
+import "../../styles/homepage/overlayIntro.css";
+import { Link } from "react-router-dom";
 
 const MotionBox = motion(Box);
 const MotionDiv = motion.div;

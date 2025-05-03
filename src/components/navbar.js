@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { Dialog, PopoverGroup, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../styles/navbar.css"; // Ensure this file includes the custom CSS below
+import ContactForm from "./contact/contact";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Listen to scroll events to toggle header background
   useEffect(() => {
@@ -105,18 +107,12 @@ export default function Navbar() {
 
         {/* Right-most Button replacing "Kinyarwanda" */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
-          <NavLink
-            to="/contactus"
-            className={({ isActive }) =>
-              `rounded-md py-2 px-4 font-semibold transition duration-200 ${
-                isActive
-                  ? "bg-white-10 text-yellow-500"
-                  : "bg-yellow-500 text-white-10"
-              } hover:bg-yellow-600 hover:text-white-10`
-            }
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="rounded-md py-2 px-4 font-semibold transition duration-200 bg-yellow-500 text-white-10 hover:bg-yellow-600"
           >
             Contact Us
-          </NavLink>
+          </button>
         </div>
       </nav>
 
@@ -187,6 +183,26 @@ export default function Navbar() {
             </div>
           </div>
         </DialogPanel>
+      </Dialog>
+      <Dialog
+        open={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+        className="z-50"
+      >
+        {/* Background dimmer */}
+        <div className="fixed inset-0 bg-black/60 z-40" aria-hidden="true" />
+        {/* Modal content wrapper */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <DialogPanel className="w-full max-w-xl bg-white-10 rounded-lg shadow-xl p-6 relative">
+            {/* Close button and ContactForm */}
+            <div className="flex justify-end mb-4">
+              <button onClick={() => setIsContactOpen(false)}>
+                <XMarkIcon className="w-6 h-6 text-gray-500 hover:text-black" />
+              </button>
+            </div>
+            <ContactForm />
+          </DialogPanel>
+        </div>
       </Dialog>
     </header>
   );

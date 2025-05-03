@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/services/overlayIntro.css";
+import "../../styles/homepage/overlayIntro.css";
 
 function OverlayIntro() {
   const [animate, setAnimate] = useState(false);

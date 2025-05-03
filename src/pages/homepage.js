@@ -19,8 +19,8 @@ export default function HomePage() {
       <Stats/>
       <OurGoal/>
       <Pillars/>
-      <Motto/>
       <PhotoGallery/>
+      <Motto/>
       <Contact/>
     </div>
   );
