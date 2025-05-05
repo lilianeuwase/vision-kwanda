@@ -75,6 +75,16 @@ export const system = createSystem(defaultConfig, {
         800: "#895e59",
         900: "#69422d",
       },
+      service: {
+        500: "#C8F1EB",
+        100: "#7ADBD2",
+        200: "#FAD1D7",
+        300: "#F7F0E8",
+        400: "#D4D4D4",
+      },
+      black: {
+     10: "#000000",
+      },
     },
     fonts: {
       heading: `'Montserrat', sans-serif`,

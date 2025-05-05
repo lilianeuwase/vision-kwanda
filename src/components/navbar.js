@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Dialog, PopoverGroup, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../styles/navbar.css"; // Ensure this file includes the custom CSS below
-import ContactForm from "./contact/contact";
+import ContactFormLong from "./contact/contactLong";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -104,8 +104,6 @@ export default function Navbar() {
             Gemstones
           </NavLink>
         </PopoverGroup>
-
-        {/* Right-most Button replacing "Kinyarwanda" */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
           <button
             onClick={() => setIsContactOpen(true)}
@@ -172,13 +170,15 @@ export default function Navbar() {
                 </NavLink>
               </div>
               <div className="py-6">
-                <NavLink
-                  onClick={closeSideBar}
-                  to="/contactus"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                <button
+                  onClick={() => {
+                    closeSideBar();
+                    setIsContactOpen(true);
+                  }}
+                  className="-mx-3 block w-full text-left rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us
-                </NavLink>
+                </button>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Navbar() {
                 <XMarkIcon className="w-6 h-6 text-gray-500 hover:text-black" />
               </button>
             </div>
-            <ContactForm />
+            <ContactFormLong />
           </DialogPanel>
         </div>
       </Dialog>

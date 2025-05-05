@@ -1,13 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  CalendarDaysIcon,
-} from "@heroicons/react/24/outline";
 
-export default function ContactForm() {
+export default function ContactFormLong() {
   const formRef = useRef();
   const [isSent, setIsSent] = useState(false);
 
@@ -33,37 +27,37 @@ export default function ContactForm() {
   };
 
   return (
-    <main className="py-14">
+    <main className="py-0">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-        <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
+        <div className="max-w-2xl mx-auto space-y-12">
           <div className="max-w-lg space-y-3">
-            <h3 className="text-green-500 font-semibold">Contact Us</h3>
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <h3 className="text-green-500 font-semibold text-3xl">
+              Contact Us
+            </h3>
+            {/* <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               Let us know how we can help
-            </p>
+            </p> */}
             <p>
               We’re here to help and answer any question you might have. Please
               fill out the form or use the contact info below.
             </p>
-            <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-start text-sm text-gray-700">
+            <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-start">
               <li className="flex items-center gap-x-3">
-                <EnvelopeIcon className="w-5 h-5 text-green-500" />
+                <div className="text-gray-400">📧</div>
                 <p>rwandaminingaccesswindow@gmail.com</p>
               </li>
               <li className="flex items-center gap-x-3">
-                <PhoneIcon className="w-5 h-5 text-green-500" />
+                <div className="text-gray-400">📞</div>
                 <p>+250788910095</p>
               </li>
-              <li className="flex items-start gap-x-3">
-                <MapPinIcon className="w-5 h-5 text-green-500 mt-1" />
-                <div>
-                  <p>Kicukiro - Zinia, Kigali, Rwanda</p>
-                </div>
+              <li className="flex items-center gap-x-3">
+                <div className="text-gray-400">📍</div>
+                <p>Kicukiro - Zinia, Kigali, Rwanda</p>
               </li>
               <li className="flex items-start gap-x-3">
-                <CalendarDaysIcon className="w-5 h-5 text-green-500 mt-1" />
+                <div className="text-gray-400">⏰</div>
                 <div>
-                  <p>Monday to Friday: 8:00 AM – 5:00 PM</p>
+                  <p>Mon–Fri: 8:00 AM – 5:00 PM</p>
                   <p>Saturday: Closed</p>
                   <p>Sunday: By Appointment</p>
                 </div>
@@ -109,7 +103,7 @@ export default function ContactForm() {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-white-10 font-medium bg-green-500 hover:bg-green-600 active:bg-green-500 rounded-lg duration-150"
+                className="w-full px-4 py-2 text-white-10 font-medium bg-green-500 hover:bg-green-400 active:bg-green-500 rounded-lg duration-150"
               >
                 Submit
               </button>
