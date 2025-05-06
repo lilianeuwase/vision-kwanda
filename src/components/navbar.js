@@ -94,14 +94,14 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/gemstones"
+            to="/minerals"
             className={({ isActive }) =>
               `menu-link text-[1rem] font-semibold leading-6 ${
                 isActive ? "active" : ""
               }`
             }
           >
-            Gemstones
+            Minerals
           </NavLink>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
@@ -126,14 +126,16 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="-m-1.5 p-1.5 text-green-500 font-bold navbar-logo"
+              className="-m-1.5 p-1.5 text-green-500 font-bold navbar-logo flex items-center gap-2"
             >
-              {/* <img
-                className="h-4 w-auto absolute left-16"
+              <img
+                className="h-8 w-auto"
                 src={require("../assets/LogoNBG.png")}
-                alt=""
-              /> */}
-              MINING ACCESS WINDOW RWANDA.
+                alt="Logo"
+              />
+              <span className="text-base font-bold">
+                MINING ACCESS WINDOW RWANDA.
+              </span>
             </Link>
             <button
               type="button"

@@ -50,7 +50,7 @@ export const AboutPart1 = () => {
           animate={imgInView ? "visible" : "hidden"}
           variants={itemVariants}
           transition={{ duration: 0.6 }}
-          className="relative w-full lg:w-1/2 h-80 lg:h-full overflow-hidden"
+          className="relative w-full lg:w-1/2 h-[40vh] lg:h-full min-h-[300px] overflow-hidden"
         >
           <img
             src={require("../../assets/teamunderground2.jpg")}

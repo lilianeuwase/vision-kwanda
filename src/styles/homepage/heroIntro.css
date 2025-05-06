@@ -1,0 +1,210 @@
+/* Reset defaults */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* The homepage container (final background is white) */
+
+.homepage {
+    background-color: white;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Dark overlay via a pseudo-element */
+
+.homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+
+/* When .animate is added, trigger the overlay keyframe animation */
+
+.homepage.animate::before {
+    animation: overlaySlide 3s forwards;
+}
+
+
+/* Updated keyframes for the overlay animation:
+   The overlay slides upward from 0 to -50% (exactly halfway) at 50% of its duration,
+   then continues to slide to -100% by the end.
+   This ensures the overlay stops exactly midway of hi (i.e. its bottom edge aligns with hi’s center). */
+
+@keyframes overlaySlide {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    61% {
+        transform: translateY(-61%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+
+/* Hero container – using flex to center its children */
+
+.hero {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+/* h1 styling:
+     - Initially off-screen above (translateY(-100%))
+     - Slides into place with slideInFromTop
+     - Uses a gradient background (top half white, bottom half black) clipped to text.
+     - The background-size is set so that the gradient can animate vertically.
+     - Initially, background-position is set so that the visible text is all white. */
+
+.hero h1 {
+    font-size: 5em;
+    margin: 0;
+    transform: translateY(-100%);
+    animation: slideInFromTop 1s forwards;
+    background: linear-gradient(to bottom, white 50%, black 50%);
+    background-size: 100% 200%;
+    background-position: 0% 0;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* When .animate is active, add the colorTransition animation to h1.
+     This animation (with a 1s delay) changes the background-position vertically:
+     - 0%: background-position 0 (all white)
+     - 50%: background-position 50% (top half white, bottom half black)
+     - 80%: hold at 50%
+     - 100%: background-position 100% (all black) */
+
+.homepage.animate .hero h1 {
+    animation: slideInFromTop 1s forwards, colorTransition 1s forwards 1s;
+}
+
+
+/* Keyframes for h1 slide-in (from top) */
+
+@keyframes slideInFromTop {
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* Keyframes for h1 color transition using background-position (vertical animation) */
+
+@keyframes colorTransition {
+    0% {
+        background-position: 0% 0;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    80% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+/* Hero content:
+     - Always occupies its layout space (to prevent shifting)
+     - Initially invisible (opacity: 0)
+     - When the 'visible' class is added, it fades in */
+
+.hero-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 20px;
+}
+
+.hero-content.visible {
+    opacity: 1;
+}
+
+
+/* Styling for hero content text and button */
+
+.hero-content h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: black;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+    max-width: 600px;
+}
+
+.hero-content button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    .hero-content h2 {
+        font-size: 1.25rem !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hide-on-smallimg {
+        display: none !important;
+    }
+    .hide-on-smalltr.hidden {
+        display: none !important;
+    }
+    .hero {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+
+
+/* .hidden {
+    display: none !important;
+} */

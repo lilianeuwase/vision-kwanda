@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../navbar";
 import { Box } from "@chakra-ui/react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import AnimatedText from "./components/animatedText";
 import AppearText from "./components/appearText";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -14,6 +19,7 @@ const AboutIntro = () => {
   const headerY = useTransform(scrollY, [0, 200], [100, 10]);
 
   const [showNavbar, setShowNavbar] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const lastScrollY = useRef(0);
 
   const [collapseTop, setCollapseTop] = useState(false);
@@ -24,7 +30,17 @@ const AboutIntro = () => {
   const oRef = useRef(null);
   const uRef = useRef(null);
 
-  // hide on scroll down, show on scroll up
+  // Track screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 1250);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // Navbar hide/show on scroll
   useEffect(() => {
     const unsubscribe = scrollY.onChange((currentY) => {
       if (currentY > lastScrollY.current) {
@@ -37,7 +53,7 @@ const AboutIntro = () => {
     return unsubscribe;
   }, [scrollY]);
 
-  // Collapse animation timing
+  // Collapse + Appear stage timing
   useEffect(() => {
     const t1 = setTimeout(() => setCollapseTop(true), 4500);
     const t2 = setTimeout(() => setCollapseBottom(true), 5000);
@@ -49,7 +65,7 @@ const AboutIntro = () => {
     };
   }, []);
 
-  // Trigger 3D model stage after appearStage
+  // Model stage starts after appearStage
   useEffect(() => {
     if (appearStage) {
       const t4 = setTimeout(() => setModelStage(true), 600);
@@ -66,16 +82,28 @@ const AboutIntro = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 100 }}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              zIndex: 100,
+            }}
           >
             <Navbar />
           </motion.div>
         )}
       </AnimatePresence>
 
-      <Box id="hero" className="relative w-full h-screen bg-gray-200 overflow-hidden">
-        <MotionBox style={{ y: headerY }} className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          {/* Top line */}
+      <Box
+        id="hero"
+        className="relative w-full h-screen bg-gray-200 overflow-hidden"
+      >
+        <MotionBox
+          style={{ y: headerY }}
+          className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+        >
+          {/* AnimatedText Line 1 */}
           <div className="relative overflow-visible pt-12">
             <AnimatedText
               text="MINING ACCESS"
@@ -85,12 +113,13 @@ const AboutIntro = () => {
               secondaryDelay={1}
               extraDelay={1.18}
               collapse={collapseTop}
-              keyLetterIndex={1}
+              keyLetterIndex={isSmallScreen ? null : 1}
               keyRef={oRef}
             />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
           </div>
-          {/* Bottom line */}
+
+          {/* AnimatedText Line 2 */}
           <div className="relative overflow-visible mt-8">
             <AnimatedText
               text="WINDOW RWANDA"
@@ -100,7 +129,7 @@ const AboutIntro = () => {
               secondaryDelay={1}
               extraDelay={0.6}
               collapse={collapseBottom}
-              keyLetterIndex={4}
+              keyLetterIndex={isSmallScreen ? null : 4}
               keyRef={uRef}
             />
             <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
@@ -114,50 +143,64 @@ const AboutIntro = () => {
             transition={{ duration: 1 }}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none"
           >
-            {/* ABOUT */}
-            <div className="relative overflow-visible pt-12">
-              <AppearText
-                text="MI "
-                className="text-7xl md:text-9xl uppercase tracking-widest font-semibold"
-                delay={0}
-                stagger={0.1}
-                keyLetterIndex={1}
-                keyRef={oRef}
-                yOffset={100}
-              />
-              <AppearText
-                text="INING"
-                className="text-7xl md:text-9xl uppercase tracking-widest font-semibold mr-[635px]"
-                delay={0}
-                stagger={0.1}
-                keyLetterIndex={0}
-                keyRef={oRef}
-                yOffset={100}
-              />
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
-            </div>
-            {/* US */}
-            <div className="relative overflow-visible mt-8">
-              <AppearText
-                text="WISDO "
-                className="text-7xl md:text-9xl uppercase tracking-widest font-semibold"
-                delay={0.5}
-                stagger={0.1}
-                keyLetterIndex={4}
-                keyRef={uRef}
-                yOffset={100}
-              />
-              <AppearText
-                text="OM"
-                className="text-7xl md:text-9xl uppercase tracking-widest font-semibold mr-[650px]"
-                delay={0.5}
-                stagger={0.1}
-                keyLetterIndex={0}
-                keyRef={uRef}
-                yOffset={100}
-              />
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
-            </div>
+            {isSmallScreen ? (
+              // ✅ Plain text for mobile
+              <div className="pt-52">
+                <h1 className="text-5xl font-bold uppercase tracking-wide text-black">
+                  M<span style={{ color: "#09BC8A" }}>I</span>N
+                  <span style={{ color: "#09BC8A" }}>I</span>NG
+                  W
+                  <span style={{ color: "#09BC8A" }}>I</span>SDOM
+                </h1>
+              </div>
+            ) : (
+              // ✅ Animated AppearText for large screens
+              <>
+                <div className="relative overflow-visible pt-12">
+                  <AppearText
+                    text="MI "
+                    className="text-7xl md:text-9xl uppercase tracking-widest font-semibold"
+                    delay={0}
+                    stagger={0.1}
+                    keyLetterIndex={1}
+                    keyRef={oRef}
+                    yOffset={100}
+                  />
+                  <AppearText
+                    text="INING"
+                    className="text-7xl md:text-9xl uppercase tracking-widest font-semibold mr-[635px]"
+                    delay={0}
+                    stagger={0.1}
+                    keyLetterIndex={0}
+                    keyRef={oRef}
+                    yOffset={100}
+                  />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
+                </div>
+
+                <div className="relative overflow-visible mt-8">
+                  <AppearText
+                    text="WISDO "
+                    className="text-7xl md:text-9xl uppercase tracking-widest font-semibold"
+                    delay={0.5}
+                    stagger={0.1}
+                    keyLetterIndex={4}
+                    keyRef={uRef}
+                    yOffset={100}
+                  />
+                  <AppearText
+                    text="OM"
+                    className="text-7xl md:text-9xl uppercase tracking-widest font-semibold mr-[650px]"
+                    delay={0.5}
+                    stagger={0.1}
+                    keyLetterIndex={0}
+                    keyRef={uRef}
+                    yOffset={100}
+                  />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-black" />
+                </div>
+              </>
+            )}
           </MotionBox>
         )}
 
@@ -194,7 +237,7 @@ const AboutIntro = () => {
 
 export default AboutIntro;
 
-// Model sub-component
+// 3D Model sub-component
 function Model(props) {
   const { scene } = useGLTF("/komatsu_hd-465-7eo/scene.gltf");
   const ref = useRef();
@@ -205,8 +248,9 @@ function Model(props) {
     }
   });
 
-  return <primitive ref={ref} object={scene} scale={[0.3, 0.3, 0.3]} {...props} />;
+  return (
+    <primitive ref={ref} object={scene} scale={[0.3, 0.3, 0.3]} {...props} />
+  );
 }
 
-// <-- MISSING CLOSING QUOTE ADDED HERE
 useGLTF.preload("/komatsu_hd-465-7eo/scene.gltf");

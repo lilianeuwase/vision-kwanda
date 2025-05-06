@@ -31,12 +31,17 @@ export const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+          <div className="grid grid-cols-3 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3">
             <div>
               <p className="font-semibold tracking-wide text-orange-500">
-                Menu
+                <a
+                  href="/aboutus"
+                  className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                >
+                  About Us
+                </a>
               </p>
-              <ul className="mt-2 space-y-2">
+              {/* <ul className="mt-2 space-y-2">
                 <li>
                   <a
                     href="/aboutus"
@@ -55,19 +60,24 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/gemstones"
+                    href="/minerals"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                    Gemstones
+                    Minerals
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div>
               <p className="font-semibold tracking-wide text-orange-500">
-                Sponsors
+                <a
+                  href="/services"
+                  className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                >
+                  Our Services
+                </a>
               </p>
-              <ul className="mt-2 space-y-2">
+              {/* <ul className="mt-2 space-y-2">
                 <li>
                   <a
                     href="/"
@@ -92,19 +102,24 @@ export const Footer = () => {
                     Business
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div>
               <p className="font-semibold tracking-wide text-orange-500">
-                Partners
+                <a
+                  href="/services"
+                  className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                >
+                  Minerals
+                </a>
               </p>
-              <ul className="mt-2 space-y-2">
+              {/* <ul className="mt-2 space-y-2">
                 <li>
                   <a
                     href="/"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                    Media
+                    RMB
                   </a>
                 </li>
                 <li>
@@ -112,7 +127,7 @@ export const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                    Brochure
+                    RAPEP
                   </a>
                 </li>
                 <li>
@@ -120,12 +135,20 @@ export const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                    Nonprofit
+                    UR
                   </a>
                 </li>
-              </ul>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                    MATEC
+                  </a>
+                </li>
+              </ul> */}
             </div>
-            <div>
+            {/* <div>
               <p className="font-semibold tracking-wide text-orange-500">
                 Business
               </p>
@@ -155,10 +178,10 @@ export const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+        <div className="flex flex-col justify-between pt-5 pb-10 border-t border-yellow-200 sm:flex-row">
           <p className="text-sm text-white">
             © Copyright {new Date().getFullYear()}. Mining Access Window Rwanda
             All rights reserved.

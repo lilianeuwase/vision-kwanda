@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Navbar from "../navbar"; // Adjust the import path as needed
 import myImage from "../../assets/MiningHome.jpg"; // Ensure your image is placed in the assets folder
-import "../../styles/homepage/overlayIntro.css";
+import "../../styles/homepage/heroIntro.css";
 import { Link } from "react-router-dom";
 
 const MotionBox = motion(Box);
@@ -12,6 +12,19 @@ const MotionDiv = motion.div;
 const HeroIntro = () => {
   const [showImage, setShowImage] = useState(false);
   const [showContent, setShowContent] = useState(false);
+  const [hideTrapezoid, setHideTrapezoid] = useState(false);
+
+  useEffect(() => {
+    const isSmallScreen = window.matchMedia("(max-width: 1024px)").matches;
+  
+    if (isSmallScreen) {
+      const hideTrapezoidTimeout = setTimeout(() => {
+        setHideTrapezoid(true);
+      }, 3550);
+  
+      return () => clearTimeout(hideTrapezoidTimeout);
+    }
+  }, []);
 
   useEffect(() => {
     // Wait for the trapezoid to finish sliding in (2 seconds) before showing the image and header
@@ -42,40 +55,44 @@ const HeroIntro = () => {
         backgroundColor: "white", // Initial screen is white
       }}
     >
-      <MotionBox
-        initial={{ x: "-100%", backgroundColor: "black" }}
-        animate={{ x: "67%" }}
-        transition={{ x: { duration: 2, ease: "easeInOut" } }}
-        w="60vw"
-        h="100vh"
-        position="absolute"
-        clipPath="polygon(100% 0%, 100% 100%, 20% 100%, 40% 0%)"
-      />
+      <div className={`hide-on-smalltr ${hideTrapezoid ? "hidden" : ""}`}>
+        <MotionBox
+          initial={{ x: "-100%", backgroundColor: "black" }}
+          animate={{ x: "67%" }}
+          transition={{ x: { duration: 2, ease: "easeInOut" } }}
+          w="60vw"
+          h="100vh"
+          position="absolute"
+          clipPath="polygon(100% 0%, 100% 100%, 20% 100%, 40% 0%)"
+        />
+      </div>
       {showImage && (
         <>
           {/* Image over the trapezoid */}
-          <MotionDiv
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 3, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: "40.2%", // Aligns with the trapezoid's final position
-              width: "60vw", // Matches the trapezoid's width
-              height: "100vh",
-              clipPath: "polygon(100% 0%, 100% 100%, 20% 100%, 40% 0%)",
-            }}
-          >
-            <Image
-              src={myImage}
-              alt="Right side image"
-              objectFit="cover"
-              w="100%"
-              h="100%"
-              style={{ filter: "brightness(0.6)" }} // Adjust brightness as needed
-            />
-          </MotionDiv>
+          <div className="hide-on-smallimg">
+            <MotionDiv
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: "40.2%", // Aligns with the trapezoid's final position
+                width: "60vw", // Matches the trapezoid's width
+                height: "100vh",
+                clipPath: "polygon(100% 0%, 100% 100%, 20% 100%, 40% 0%)",
+              }}
+            >
+              <Image
+                src={myImage}
+                alt="Right side image"
+                objectFit="cover"
+                w="100%"
+                h="100%"
+                style={{ filter: "brightness(0.6)" }} // Adjust brightness as needed
+              />
+            </MotionDiv>
+          </div>
           {/* Header overlay */}
           <MotionDiv
             initial={{ opacity: 0 }}
