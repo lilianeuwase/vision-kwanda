@@ -31,7 +31,7 @@ function App() {
       </div>
       </ScrollToTop>
     </Router>
-    <Partners/>
+    {/* <Partners/> */}
     <Footer/>
     </ChakraProvider>
   );

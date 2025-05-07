@@ -191,7 +191,8 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+
+/* @media screen and (max-width: 1024px) {
     .hide-on-smallimg {
         display: none !important;
     }
@@ -202,7 +203,7 @@
         background-color: white !important;
         color: black !important;
     }
-}
+} */
 
 
 /* .hidden {

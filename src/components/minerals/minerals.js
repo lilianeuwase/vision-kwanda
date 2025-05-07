@@ -10,7 +10,6 @@ import {
 } from "@react-three/drei";
 import Header from "../navbar";
 
-// RotatingModel auto-rotates when not dragging, and allows custom rotations via pointer events.
 function RotatingModel({
   position,
   label,
@@ -22,7 +21,6 @@ function RotatingModel({
   const rotationStart = useRef([0, 0, 0]);
   const [dragging, setDragging] = useState(false);
 
-  // Auto-rotate when not dragging.
   useFrame((state, delta) => {
     if (!dragging && ref.current) {
       ref.current.rotation.x += delta * 0.2;
@@ -52,9 +50,7 @@ function RotatingModel({
     }
   };
 
-  const onPointerUp = () => {
-    setDragging(false);
-  };
+  const onPointerUp = () => setDragging(false);
 
   return (
     <group
@@ -79,38 +75,6 @@ function RotatingModel({
   );
 }
 
-// Load your custom models using useGLTF
-const AmethystModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/amethyst_crystal/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-const SapphireModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/sapphire_6-3/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-const SpinelsModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/spinels_gem/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-const BerylModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/beryl/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-const TourmalineModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/tourmaline/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-const SpurriteModel = React.forwardRef((props, ref) => {
-  const { scene } = useGLTF("/spurrite_on_blue_calcite_5-30-2020/scene.gltf");
-  return <primitive ref={ref} object={scene} {...props} />;
-});
-
-// A helper component for the annotation
 function Annotation({ start, vertex, end, text, textPos, maxWidth = 2.5 }) {
   return (
     <>
@@ -138,159 +102,172 @@ function Annotation({ start, vertex, end, text, textPos, maxWidth = 2.5 }) {
   );
 }
 
-// Main Scene with centered models and vertical offsets.
+const BoxModel = (color) =>
+  React.forwardRef((props, ref) => (
+    <mesh ref={ref} {...props}>
+      <boxGeometry />
+      <meshStandardMaterial color={color} />
+    </mesh>
+  ));
+
+const models = {
+  Coltan: BoxModel("gray"),
+  Cassiterite: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/cassiterite/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Wolfram: BoxModel("darkslategray"),
+  Gold: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/gold_bar_single/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Lithium: BoxModel("lightblue"),
+  Amethyst: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/amethyst_crystal/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Sapphire: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/sapphire_6-3/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Tourmaline: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/tourmaline/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Beryl: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/beryl/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  "Clays for Bricks": BoxModel("burlywood"),
+  Sand: BoxModel("khaki"),
+  Gravel: BoxModel("slategray"),
+  "Glass and Ceramics": BoxModel("lightseagreen"),
+  Peat: BoxModel("saddlebrown"),
+  "Oil (Petroleum)": BoxModel("black"),
+  "Methane Gas": BoxModel("skyblue"),
+};
+
+const descriptions = {
+  Coltan:
+    "Coltan is a dull black mineral that contains tantalum, a rare metal essential for making capacitors in electronic devices like smartphones, laptops, and medical equipment.",
+  Cassiterite:
+    "Cassiterite is the primary ore of tin, a metal used in soldering, plating, and creating corrosion-resistant alloys, especially in electronics and packaging.",
+  Wolfram:
+    "Wolfram, also known as tungsten ore, is the main source of tungsten metal, valued for its exceptional hardness and highest melting point, making it ideal for cutting tools, filaments, and military applications.",
+  Gold: "Gold is a precious metal known for its luster, conductivity, and resistance to corrosion. It is widely used in jewelry, electronics, dentistry, and as a financial asset.",
+  Lithium:
+    "Lithium minerals, such as spodumene and lepidolite, are the primary sources of lithium, a lightweight metal crucial for rechargeable batteries, especially in electric vehicles, smartphones, and energy storage systems.",
+  Amethyst:
+    "Amethyst is a violet variety of quartz valued for its striking color and clarity, commonly used in jewelry and believed to have calming and protective properties.",
+  Sapphire:
+    "Sapphire is a durable gemstone typically known for its deep blue color, though it occurs in many hues. It’s prized in jewelry and also used in industrial applications like watch crystals and electronics due to its hardness.",
+  Tourmaline:
+    "Tourmaline is a colorful boron-silicate mineral found in a wide range of vibrant shades. It is popular in gem collections and jewelry and is known for its piezoelectric properties.",
+  Beryl:
+    "Beryl is a mineral group that includes gemstones such as emerald and aquamarine. It forms in hexagonal crystals and is valued for its clarity and color variations.",
+  "Clays for Bricks":
+    "Clay is a fine-grained natural soil material used in the production of bricks and ceramics. When fired, it hardens to form durable building materials essential in the construction industry.",
+  Sand: "Sand is a granular material composed mainly of quartz. It is essential in construction for making concrete and mortar, and in manufacturing glass and foundry molds.",
+  Gravel:
+    "Gravel consists of coarse rock fragments and is widely used in construction, especially for road base, concrete aggregate, and drainage systems.",
+  "Glass and Ceramics":
+    "Glass and ceramics are industrial materials made from quartz, sand, feldspars, and clays. They are used in household items, electronics, architecture, and high-temperature engineering components.",
+  Peat: "Peat is an organic material formed from decomposed plant matter, used as a low-grade fuel and soil conditioner. In Rwanda, it is extracted from Bisagara District in the Southern Province.",
+  "Oil (Petroleum)":
+    "Oil (Petroleum) is currently under exploration in Rwanda for reserve estimation. It is a fossil fuel potentially valuable for domestic energy production, refining, and industrial use.",
+  "Methane Gas":
+    "Methane gas is being exploited from Lake Kivu, Rwanda. It is used for electricity generation and has potential for expanded use in industrial energy and domestic cooking fuel.",
+};
+
 function Scene() {
   const { viewport } = useThree();
   const vh = viewport.height;
   const offsetFactor = 0.7;
+  const order = Object.keys(descriptions);
 
   return (
     <Scroll>
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} />
-      {/* 1st model: Amethyst */}
-      <group position={[0, 0, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Amethyst"
-          ModelComponent={AmethystModel}
-          modelScale={[0.07, 0.07, 0.07]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Amethyst: a purple quartz known for its soothing energy."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
-      {/* 2nd model: Sapphire */}
-      <group position={[0, -offsetFactor * vh, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Sapphire"
-          ModelComponent={SapphireModel}
-          modelScale={[1.5, 1.5, 1.5]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Sapphire: prized for its vivid blue hue and durability."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
-      {/* 3rd model: Spinels Gem */}
-      <group position={[0, -2 * offsetFactor * vh, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Spinels Gem"
-          ModelComponent={SpinelsModel}
-          modelScale={[0.02, 0.02, 0.02]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Spinel: a dazzling gem available in a spectrum of colors."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
-      {/* 4th model: Beryl */}
-      <group position={[0, -3 * offsetFactor * vh, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Beryl"
-          ModelComponent={BerylModel}
-          modelScale={[0.2, 0.2, 0.2]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Beryl: a mineral family that includes emerald and aquamarine."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
-      {/* 5th model: Tourmaline */}
-      <group position={[0, -4 * offsetFactor * vh, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Tourmaline"
-          ModelComponent={TourmalineModel}
-          modelScale={[5, 5, 5]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Tourmaline: celebrated for its rich variety of vibrant colors."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
-      {/* 6th model: Spurrite on Blue Calcite */}
-      <group position={[0, -5 * offsetFactor * vh, 0]}>
-        <RotatingModel
-          position={[0, 0, 0]}
-          label="Spurrite on Blue Calcite"
-          ModelComponent={SpurriteModel}
-          modelScale={[0.7, 0.7, 0.7]}
-        />
-        <Annotation
-          start={[0, -0.2, 0]}
-          vertex={[0.5, 0.5, 0]}
-          end={[2.5, 0.5, 0]}
-          text="Spurrite on Blue Calcite: a unique crystal with striking blue and white tones."
-          textPos={[3, 0.5, 0]}
-        />
-      </group>
+      {order.map((label, i) => (
+        <group key={label} position={[0, -i * offsetFactor * vh, 0]}>
+          <RotatingModel
+            position={[0, 0, 0]}
+            label={label}
+            ModelComponent={models[label]}
+            modelScale={
+              label === "Cassiterite"
+                ? [0.06, 0.06, 0.06]
+                : label === "Amethyst"
+                ? [0.07, 0.07, 0.07]
+                : label === "Sapphire"
+                ? [1.5, 1.5, 1.5]
+                : label === "Tourmaline"
+                ? [5, 5, 5]
+                : label === "Beryl"
+                ? [0.2, 0.2, 0.2]
+                : label === "Gold"
+                ? [2, 2, 2]
+                : [1, 1, 1]
+            }
+          />
+          <Annotation
+            start={[0, -0.2, 0]}
+            vertex={[0.5, 0.5, 0]}
+            end={[2.5, 0.5, 0]}
+            text={descriptions[label]}
+            textPos={[3, 0.5, 0]}
+          />
+        </group>
+      ))}
     </Scroll>
   );
 }
 
-// Updates the document background color based on normalized scroll offset.
 function ScrollBackground() {
   const scroll = useScroll();
-
+  const colors = [
+    "#da8370",
+    "#54c89d",
+    "#2F4F4F",
+    "#1c5a44",
+    "#725916",
+    "#d36553",
+    "#7EBDC2",
+    "#DDA0DD",
+    "#7BA05B",
+    "#DEB887",
+    "#7ADBD2",
+    "#708090",
+    "#20B2AA",
+    "#8B4513",
+    "#000000",
+    "#87CEEB",
+  ];
   useFrame(() => {
-    let bg;
-    if (scroll.offset < 0.1666) {
-      bg = "#d36553"; // Amethyst
-    } else if (scroll.offset < 0.3333) {
-      bg = "#7EBDC2"; // Sapphire
-    } else if (scroll.offset < 0.5) {
-      bg = "#1ea896"; // Spinels Gem
-    } else if (scroll.offset < 0.6666) {
-      bg = "#7BA05B"; // Beryl
-    } else if (scroll.offset < 0.8333) {
-      bg = "#DDA0DD"; // Tourmaline
-    } else {
-      bg = "#4c5454"; // Spurrite on Blue Calcite
-    }
-    document.body.style.backgroundColor = bg;
+    const index = Math.floor(scroll.offset * colors.length);
+    document.body.style.backgroundColor =
+      colors[Math.min(index, colors.length - 1)];
   });
-
-  useEffect(() => {
-    return () => {
-      // Reset the background color when the component unmounts
+  useEffect(
+    () => () => {
       document.body.style.backgroundColor = "";
-    };
-  }, []);
-
+    },
+    []
+  );
   return null;
 }
 
-// The main App component (named Minerals)
 function Minerals() {
   return (
     <>
       <Header />
-      <div style={{ height: "450vh" }}>
+      <div style={{ height: "1120vh" }}>
         <Canvas
           style={{ position: "fixed", top: 0, left: 0 }}
           camera={{ position: [0, 0, 5] }}
         >
-          <ScrollControls pages={4.5} damping={0.1}>
+          <ScrollControls pages={11.4} damping={0.1}>
             <Scene />
             <ScrollBackground />
           </ScrollControls>

@@ -16,12 +16,12 @@ const HeroIntro = () => {
 
   useEffect(() => {
     const isSmallScreen = window.matchMedia("(max-width: 1024px)").matches;
-  
+
     if (isSmallScreen) {
       const hideTrapezoidTimeout = setTimeout(() => {
         setHideTrapezoid(true);
       }, 3550);
-  
+
       return () => clearTimeout(hideTrapezoidTimeout);
     }
   }, []);
@@ -116,14 +116,19 @@ const HeroIntro = () => {
             style={{
               position: "absolute",
               top: "30%",
-              left: "5%",
+              left: 0,
+              width: "50vw",
+              paddingLeft: "5vw",
+              paddingRight: "2vw",
               zIndex: 5,
               color: "black",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
             }}
           >
             <div className="hero">
-              {/* Heading with a highlight behind "EMPOWERS" */}
-              <h1 style={{ color: "black" }}>
+              <h1 style={{ color: "black", marginBottom: "1rem" }}>
                 ENVIRONMENTAL{" "}
                 <span
                   style={{
@@ -134,15 +139,21 @@ const HeroIntro = () => {
                   EMPOWERS
                 </span>
               </h1>
-              {/* Hero content fades in after the image appears */}
               <div className={`hero-content ${showContent ? "visible" : ""}`}>
-                <h2>Mining, Quarry, Environmental, Health and Safety </h2>
+                <h2>Mining, Quarry, Environmental, Health and Safety</h2>
                 <p>
                   Empowering Mining Engineering, Environmental, Health and
                   Safety Services; A Benchmark to the Sustainable Development of
                   the Rwandan mining Sector
                 </p>
-                <Link to="/aboutus" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/aboutus"
+                  style={{
+                    textDecoration: "none",
+                    marginTop: "1rem",
+                    display: "inline-block",
+                  }}
+                >
                   <Button size="lg">About Us</Button>
                 </Link>
               </div>
