@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bristol Basal Sherd (PhotoCatch)
+* source:	https://sketchfab.com/3d-models/bristol-basal-sherd-photocatch-7075952025494cd0b2ca7a9e77acf600
+* author:	Digital Archaeology Laboratory (https://sketchfab.com/digitalarch)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bristol Basal Sherd (PhotoCatch)" (https://sketchfab.com/3d-models/bristol-basal-sherd-photocatch-7075952025494cd0b2ca7a9e77acf600) by Digital Archaeology Laboratory (https://sketchfab.com/digitalarch) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

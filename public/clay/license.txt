@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clay Brick
+* source:	https://sketchfab.com/3d-models/clay-brick-adc8de4f9d4a4091bf5b5dedf45fcba4
+* author:	Världskulturmuseerna (https://sketchfab.com/varldskulturmuseerna)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clay Brick" (https://sketchfab.com/3d-models/clay-brick-adc8de4f9d4a4091bf5b5dedf45fcba4) by Världskulturmuseerna (https://sketchfab.com/varldskulturmuseerna) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

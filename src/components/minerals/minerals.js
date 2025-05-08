@@ -118,10 +118,13 @@ const models = {
   }),
   Wolfram: BoxModel("darkslategray"),
   Gold: React.forwardRef((props, ref) => {
-    const { scene } = useGLTF("/gold_bar_single/scene.gltf");
+    const { scene } = useGLTF("/gold_nugget/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
-  Lithium: BoxModel("lightblue"),
+  Lithium: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/lithium/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
   Amethyst: React.forwardRef((props, ref) => {
     const { scene } = useGLTF("/amethyst_crystal/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
@@ -138,12 +141,30 @@ const models = {
     const { scene } = useGLTF("/beryl/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
-  "Clays for Bricks": BoxModel("burlywood"),
-  Sand: BoxModel("khaki"),
-  Gravel: BoxModel("slategray"),
-  "Glass and Ceramics": BoxModel("lightseagreen"),
-  Peat: BoxModel("saddlebrown"),
-  "Oil (Petroleum)": BoxModel("black"),
+  "Clays for Bricks": React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/clay/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Sand: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/sand/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Gravel: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/gravel/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  "Glass and Ceramics": React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/glass/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  Peat: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/peat/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
+  "Oil (Petroleum)": React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/oil/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
   "Methane Gas": BoxModel("skyblue"),
 };
 
@@ -207,7 +228,21 @@ function Scene() {
                 : label === "Beryl"
                 ? [0.2, 0.2, 0.2]
                 : label === "Gold"
-                ? [2, 2, 2]
+                ? [12, 12, 12]
+                : label === "Lithium"
+                ? [0.6, 0.6, 0.6]
+                : label === "Clays for Bricks"
+                ? [0.003, 0.003, 0.003]
+                : label === "Sand"
+                ? [0.5, 0.75, 0.25]
+                : label === "Gravel"
+                ? [1.5, 1.5, 1.5]
+                : label === "Glass and Ceramics"
+                ? [6, 6, 6]
+                : label === "Peat"
+                ? [0.01, 0.01, 0.01]
+                : label === "Oil (Petroleum)"
+                ? [1.5, 1.5, 1.5]
                 : [1, 1, 1]
             }
           />
@@ -241,7 +276,7 @@ function ScrollBackground() {
     "#708090",
     "#20B2AA",
     "#8B4513",
-    "#000000",
+    "#7ADBD2",
     "#87CEEB",
   ];
   useFrame(() => {

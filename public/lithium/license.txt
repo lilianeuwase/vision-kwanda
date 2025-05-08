@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lepidolite
+* source:	https://sketchfab.com/3d-models/lepidolite-405922e76c4f4161860cb4d79ad7654f
+* author:	The Watt Institution (https://sketchfab.com/wattinstitution)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lepidolite" (https://sketchfab.com/3d-models/lepidolite-405922e76c4f4161860cb4d79ad7654f) by The Watt Institution (https://sketchfab.com/wattinstitution) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
