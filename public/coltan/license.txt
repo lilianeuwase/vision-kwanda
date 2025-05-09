@@ -1,0 +1,11 @@
+Model Information:
+* title:	Black Stone Material Study
+* source:	https://sketchfab.com/3d-models/black-stone-material-study-d0b008f3e69245be8c654d82b35aaac8
+* author:	Kafu Dev (https://sketchfab.com/kafutschga)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Black Stone Material Study" (https://sketchfab.com/3d-models/black-stone-material-study-d0b008f3e69245be8c654d82b35aaac8) by Kafu Dev (https://sketchfab.com/kafutschga) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

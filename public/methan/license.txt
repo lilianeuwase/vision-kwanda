@@ -1,0 +1,11 @@
+Model Information:
+* title:	LPG Gas Cylinder
+* source:	https://sketchfab.com/3d-models/lpg-gas-cylinder-18ca9f4949fa4682a530af2fa29f6191
+* author:	lord_hypersonic (https://sketchfab.com/lord_hypersonic)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "LPG Gas Cylinder" (https://sketchfab.com/3d-models/lpg-gas-cylinder-18ca9f4949fa4682a530af2fa29f6191) by lord_hypersonic (https://sketchfab.com/lord_hypersonic) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sapphire 6-3
+* source:	https://sketchfab.com/3d-models/sapphire-6-3-9d0e5a14411544e58cc5bbecead5ff35
+* author:	rocksandminerals (https://sketchfab.com/rocksandminerals)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sapphire 6-3" (https://sketchfab.com/3d-models/sapphire-6-3-9d0e5a14411544e58cc5bbecead5ff35) by rocksandminerals (https://sketchfab.com/rocksandminerals) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

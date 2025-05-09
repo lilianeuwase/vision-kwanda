@@ -111,14 +111,20 @@ const BoxModel = (color) =>
   ));
 
 const models = {
-  Coltan: BoxModel("gray"),
+  Coltan: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/coltan/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
   Cassiterite: React.forwardRef((props, ref) => {
     const { scene } = useGLTF("/cassiterite/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
-  Wolfram: BoxModel("darkslategray"),
+  Wolfram: React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/wolfram/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
   Gold: React.forwardRef((props, ref) => {
-    const { scene } = useGLTF("/gold_nugget/scene.gltf");
+    const { scene } = useGLTF("/gold/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
   Lithium: React.forwardRef((props, ref) => {
@@ -126,11 +132,11 @@ const models = {
     return <primitive ref={ref} object={scene} {...props} />;
   }),
   Amethyst: React.forwardRef((props, ref) => {
-    const { scene } = useGLTF("/amethyst_crystal/scene.gltf");
+    const { scene } = useGLTF("/amethyst/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
   Sapphire: React.forwardRef((props, ref) => {
-    const { scene } = useGLTF("/sapphire_6-3/scene.gltf");
+    const { scene } = useGLTF("/sapphire/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
   Tourmaline: React.forwardRef((props, ref) => {
@@ -165,7 +171,10 @@ const models = {
     const { scene } = useGLTF("/oil/scene.gltf");
     return <primitive ref={ref} object={scene} {...props} />;
   }),
-  "Methane Gas": BoxModel("skyblue"),
+  "Methane Gas": React.forwardRef((props, ref) => {
+    const { scene } = useGLTF("/methan/scene.gltf");
+    return <primitive ref={ref} object={scene} {...props} />;
+  }),
 };
 
 const descriptions = {
@@ -217,31 +226,37 @@ function Scene() {
             label={label}
             ModelComponent={models[label]}
             modelScale={
-              label === "Cassiterite"
-                ? [0.06, 0.06, 0.06]
+              label === "Coltan"
+                ? [0.5, 0.5, 0.5]
+                : label === "Cassiterite"
+                ? [0.04, 0.04, 0.04]
+                : label === "Wolfram"
+                ? [1, 1, 1]
                 : label === "Amethyst"
-                ? [0.07, 0.07, 0.07]
+                ? [0.05, 0.05, 0.05]
                 : label === "Sapphire"
-                ? [1.5, 1.5, 1.5]
+                ? [1.2, 1.2, 1.2]
                 : label === "Tourmaline"
                 ? [5, 5, 5]
                 : label === "Beryl"
-                ? [0.2, 0.2, 0.2]
+                ? [0.15, 0.15, 0.15]
                 : label === "Gold"
-                ? [12, 12, 12]
+                ? [10, 10, 10]
                 : label === "Lithium"
-                ? [0.6, 0.6, 0.6]
+                ? [0.4, 0.4, 0.4]
                 : label === "Clays for Bricks"
                 ? [0.003, 0.003, 0.003]
                 : label === "Sand"
-                ? [0.5, 0.75, 0.25]
+                ? [0.2, 0.75, 0.25]
                 : label === "Gravel"
-                ? [1.5, 1.5, 1.5]
+                ? [1.3, 1.3, 1.3]
                 : label === "Glass and Ceramics"
                 ? [6, 6, 6]
                 : label === "Peat"
                 ? [0.01, 0.01, 0.01]
                 : label === "Oil (Petroleum)"
+                ? [1.5, 1.5, 1.5]
+                : label === "Methane Gas"
                 ? [1.5, 1.5, 1.5]
                 : [1, 1, 1]
             }
