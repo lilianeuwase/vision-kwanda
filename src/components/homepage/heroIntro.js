@@ -90,6 +90,7 @@ const HeroIntro = () => {
                 w="100%"
                 h="100%"
                 style={{ filter: "brightness(0.6)" }} // Adjust brightness as needed
+                loading="lazy"
               />
             </MotionDiv>
           </div>
