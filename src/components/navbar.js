@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Dialog, PopoverGroup, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import "../styles/navbar.css"; // Ensure this file includes the custom CSS below
+import "../styles/navbar.css";
 import ContactFormLong from "./contact/contactLong";
 
 export default function Navbar() {
