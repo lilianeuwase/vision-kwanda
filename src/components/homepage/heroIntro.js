@@ -2,7 +2,7 @@ import { Box, Image, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Navbar from "../navbar"; // Adjust the import path as needed
-import myImage from "../../assets/MiningHome2.webp"; // Ensure your image is placed in the assets folder
+import myImage from "../../assets/MiningHome-min.jpg"; // Ensure your image is placed in the assets folder
 import "../../styles/homepage/heroIntro.css";
 import { Link } from "react-router-dom";
 

@@ -181,7 +181,7 @@
 
 @media screen and (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
     }
     .hero-content h2 {
         font-size: 1.25rem !important;
