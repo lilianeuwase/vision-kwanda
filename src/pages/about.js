@@ -16,7 +16,7 @@ export default function About() {
       <AboutText/>
       <AboutPart3/>
       <Rwanda/>
-      <Team/>
+      {/* <Team/> */}
       <Partners/>
     </div>
   );

@@ -13,14 +13,14 @@ export default () => {
           <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
             <div className="flex-none space-y-5 max-w-xl">
               <a
-                href="/gemstones"
+                href="/minerals"
                 className="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white-10"
               >
                 <span className="inline-block rounded-full px-3 py-1 bg-green-600 text-white-10">
                   Learn
                 </span>
                 <p className="flex items-center">
-                  Read more about Gemstones
+                  Read more about Minerals
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"

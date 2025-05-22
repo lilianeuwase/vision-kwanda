@@ -82,6 +82,16 @@ export default function Navbar() {
           >
             About Us
           </NavLink>
+                    <NavLink
+            to="/team"
+            className={({ isActive }) =>
+              `menu-link text-[1rem] font-semibold leading-6 ${
+                isActive ? "active" : ""
+              }`
+            }
+          >
+            Our Team
+          </NavLink>
           <NavLink
             to="/services"
             className={({ isActive }) =>

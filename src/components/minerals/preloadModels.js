@@ -15,7 +15,7 @@ export function preloadModels() {
     "/clay/scene.gltf",
     "/sand/scene.gltf",
     "/gravel/scene.gltf",
-    "/glass/scene.gltf",
+    // "/glass/scene.gltf",
     "/peat/scene.gltf",
     "/oil/scene.gltf",
     "/methan/scene.gltf",

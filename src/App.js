@@ -9,10 +9,10 @@ import Example from "./components/homepage/tbu";
 import { Footer } from "./components/footer";
 import Services from "./pages/services";
 import About from "./pages/about";
-import Partners from "./components/partners";
 import TeamPage from "./pages/teamPage";
-import Minerals from "./components/minerals/minerals";
 import Error404 from "./components/error404";
+import Minerals from "./components/minerals/minerals";
+import { Maybe } from "./components/unused/maybe";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/minerals" element={<Minerals />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/view" element={<Example />} />
+          <Route path="/view" element={<Maybe />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>

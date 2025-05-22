@@ -9,7 +9,7 @@ const Motto = () => {
             Our Motto
           </h2>
           <p className="text-medium text-body-color dark:text-dark-6">
-            We are committed to empowering mining engineering, environmental,
+            We are committed to powering mining engineering, environmental,
             health, and safety services as a cornerstone for
             progress—establishing a benchmark for the sustainable development of
             Rwanda’s mining sector. Through innovation, capacity building, and

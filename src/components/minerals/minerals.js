@@ -1,5 +1,5 @@
 // 📁 pages/Minerals.js
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import Header from "../navbar";
@@ -10,6 +10,7 @@ import descriptions from "./data/descriptions";
 // for scroll background effect
 import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import MineralsIntro from "./mineralsIntro";
 
 function ScrollBackground() {
   const scroll = useScroll();
@@ -55,6 +56,7 @@ export default function Minerals() {
   return (
     <>
       <Header />
+      <MineralsIntro/>
       <div style={{ height: `${modelCount * 100}vh` }}>
         <Canvas
           style={{ position: "fixed", top: 0, left: 0 }}

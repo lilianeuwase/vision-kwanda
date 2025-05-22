@@ -33,7 +33,7 @@ const AboutIntro = () => {
   // Track screen size
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsSmallScreen(window.innerWidth <= 1250);
+      setIsSmallScreen(window.innerWidth <= 1400);
     };
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
@@ -146,7 +146,7 @@ const AboutIntro = () => {
             {isSmallScreen ? (
               // ✅ Plain text for mobile
               <div className="pt-52">
-                <h1 className="text-5xl font-bold uppercase tracking-wide text-black">
+                <h1 className="text-8xl font-bold uppercase tracking-wide text-black">
                   M<span style={{ color: "#09BC8A" }}>I</span>N
                   <span style={{ color: "#09BC8A" }}>I</span>NG
                   W

@@ -12,7 +12,7 @@ const descriptions = {
   "Clays for Bricks": "Clay is a fine-grained natural soil material used in the production of bricks and ceramics. When fired, it hardens to form durable building materials essential in the construction industry.",
   Sand: "Sand is a granular material composed mainly of quartz. It is essential in construction for making concrete and mortar, and in manufacturing glass and foundry molds.",
   Gravel: "Gravel consists of coarse rock fragments and is widely used in construction, especially for road base, concrete aggregate, and drainage systems.",
-  "Glass and Ceramics": "Glass and ceramics are industrial materials made from quartz, sand, feldspars, and clays. They are used in household items, electronics, architecture, and high-temperature engineering components.",
+  // "Glass and Ceramics": "Glass and ceramics are industrial materials made from quartz, sand, feldspars, and clays. They are used in household items, electronics, architecture, and high-temperature engineering components.",
   Peat: "Peat is an organic material formed from decomposed plant matter, used as a low-grade fuel and soil conditioner. In Rwanda, it is extracted from Bisagara District in the Southern Province.",
   "Oil (Petroleum)": "Oil (Petroleum) is currently under exploration in Rwanda for reserve estimation. It is a fossil fuel potentially valuable for domestic energy production, refining, and industrial use.",
   "Methane Gas": "Methane gas is being exploited from Lake Kivu, Rwanda. It is used for electricity generation and has potential for expanded use in industrial energy and domestic cooking fuel."

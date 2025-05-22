@@ -18,7 +18,7 @@ export default function HomePage() {
       <HeroDark />
       <WhoWeAre />
       <Efficiency />
-      <Stats />
+      {/* <Stats /> */}
       <OurGoal />
       <Pillars />
       <Motto />

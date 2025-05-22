@@ -143,7 +143,7 @@ const HeroIntro = () => {
               <div className={`hero-content ${showContent ? "visible" : ""}`}>
                 <h2>Mining, Quarry, Environmental, Health and Safety</h2>
                 <p>
-                  Empowering Mining Engineering, Environmental, Health and
+                  Powering Mining Engineering, Environmental, Health and
                   Safety Services; A Benchmark to the Sustainable Development of
                   the Rwandan mining Sector
                 </p>

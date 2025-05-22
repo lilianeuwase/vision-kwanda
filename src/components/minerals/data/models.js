@@ -21,7 +21,7 @@ const models = {
   "Clays for Bricks": loadModel("/clay/scene.gltf"),
   Sand: loadModel("/sand/scene.gltf"),
   Gravel: loadModel("/gravel/scene.gltf"),
-  "Glass and Ceramics": loadModel("/glass/scene.gltf"),
+  // "Glass and Ceramics": loadModel("/glass/scene.gltf"),
   Peat: loadModel("/peat/scene.gltf"),
   "Oil (Petroleum)": loadModel("/oil/scene.gltf"),
   "Methane Gas": loadModel("/methan/scene.gltf"),
