@@ -1,0 +1,11 @@
+Model Information:
+* title:	Béryl
+* source:	https://sketchfab.com/3d-models/beryl-b16ce98791bc41239a9a707e5a860178
+* author:	SorbonNum (https://sketchfab.com/SorbonNum)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Béryl" (https://sketchfab.com/3d-models/beryl-b16ce98791bc41239a9a707e5a860178) by SorbonNum (https://sketchfab.com/SorbonNum) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

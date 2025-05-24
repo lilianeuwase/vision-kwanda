@@ -58,7 +58,7 @@ export default () => {
                   </h4>
                   <p className="text-green-600 mt-4">{item.title}</p>
                   <p className="text-gray-600 mt-4">{item.desc}</p>
-                  <div className="mt-3 flex gap-4 text-gray-400">
+                  {/* <div className="mt-3 flex gap-4 text-gray-400">
                     <a href={item.twitter}>
                       <svg
                         className="w-5 h-5 duration-150 hover:text-gray-500"
@@ -98,7 +98,7 @@ export default () => {
                         </defs>
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </li>
             ))}

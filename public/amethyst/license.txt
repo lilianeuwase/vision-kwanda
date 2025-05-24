@@ -1,11 +1,11 @@
 Model Information:
-* title:	Amethyst crystal
-* source:	https://sketchfab.com/3d-models/amethyst-crystal-671adaa900014ca88993fa81c27f7e5e
-* author:	Panomedia (https://sketchfab.com/panomedia)
+* title:	Amethyst Cluster Scan
+* source:	https://sketchfab.com/3d-models/amethyst-cluster-scan-52d2f1aa86b1433a8387d6376d094e88
+* author:	evolkov (https://sketchfab.com/evolkov)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Amethyst crystal" (https://sketchfab.com/3d-models/amethyst-crystal-671adaa900014ca88993fa81c27f7e5e) by Panomedia (https://sketchfab.com/panomedia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Amethyst Cluster Scan" (https://sketchfab.com/3d-models/amethyst-cluster-scan-52d2f1aa86b1433a8387d6376d094e88) by evolkov (https://sketchfab.com/evolkov) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

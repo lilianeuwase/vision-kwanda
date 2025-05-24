@@ -49,10 +49,10 @@ const HeroIntro = () => {
     <MotionDiv
       style={{
         width: "100vw",
-        height: "100vh",
+        minHeight: "100vh", // ✅ Allows content to grow
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "white", // Initial screen is white
+        backgroundColor: "white",
       }}
     >
       <div className={`hide-on-smalltr ${hideTrapezoid ? "hidden" : ""}`}>
@@ -116,11 +116,12 @@ const HeroIntro = () => {
             transition={{ duration: 3, ease: "easeInOut" }}
             style={{
               position: "absolute",
-              top: "30%",
+              top: "15%",
               left: 0,
-              width: "50vw",
-              paddingLeft: "5vw",
-              paddingRight: "2vw",
+              width: "100%",
+              maxWidth: "50vw",
+              paddingLeft: "5%",
+              paddingRight: "2%",
               zIndex: 5,
               color: "black",
               display: "flex",
@@ -143,9 +144,9 @@ const HeroIntro = () => {
               <div className={`hero-content ${showContent ? "visible" : ""}`}>
                 <h2>Mining, Quarry, Environmental, Health and Safety</h2>
                 <p>
-                  Powering Mining Engineering, Environmental, Health and
-                  Safety Services; A Benchmark to the Sustainable Development of
-                  the Rwandan mining Sector
+                  Powering Mining Engineering, Environmental, Health and Safety
+                  Services; A Benchmark to the Sustainable Development of the
+                  Rwandan mining Sector
                 </p>
                 <Link
                   to="/aboutus"

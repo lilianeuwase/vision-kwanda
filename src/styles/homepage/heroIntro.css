@@ -82,7 +82,8 @@
      - Initially, background-position is set so that the visible text is all white. */
 
 .hero h1 {
-    font-size: 5em;
+    font-size: clamp(2rem, 6vw, 5em);
+    /* Responsive scaling */
     margin: 0;
     transform: translateY(-100%);
     animation: slideInFromTop 1s forwards;
@@ -152,16 +153,18 @@
 /* Styling for hero content text and button */
 
 .hero-content h2 {
-    font-size: 2em;
+    font-size: clamp(1.25rem, 3vw, 2em);
     margin: 10px 0;
     color: black;
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 2.5vw, 1.2em);
     margin: 10px 0;
     color: #555;
     max-width: 600px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-content button {

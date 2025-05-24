@@ -5,14 +5,14 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        15.563394546508789,
-        8.336158752441406,
-        21.266075134277344
+        30.808120727539063,
+        5.720404148101807,
+        24.667648315429688
       ],
       "min": [
-        -16.953407287597656,
-        -8.473908424377441,
-        -0.38040733337402344
+        -47.58895492553711,
+        -48.71833038330078,
+        -29.352102279663086
       ],
       "type": "VEC3"
     },
@@ -22,14 +22,14 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        0.9999325275421143,
-        0.9999967217445374,
-        0.9999828338623047
+        1.0,
+        1.0,
+        1.0
       ],
       "min": [
-        -0.9999563097953796,
-        -0.9999927282333374,
-        -0.9998611211776733
+        -1.0,
+        -1.0,
+        -1.0
       ],
       "type": "VEC3"
     },
@@ -38,19 +38,19 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        0.9998340010643005,
-        0.9998369812965393
+        0.9644820094108582,
+        0.9992560148239136
       ],
       "min": [
-        0.0001630000042496249,
-        0.00016700000560376793
+        0.025297999382019043,
+        0.007895000278949738
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 293604,
+      "count": 366048,
       "type": "SCALAR"
     },
     {
@@ -59,14 +59,14 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        15.541370391845703,
-        8.45367431640625,
-        21.155990600585938
+        19.213804244995117,
+        11.583226203918457,
+        29.467649459838867
       ],
       "min": [
-        -17.13204574584961,
-        -8.617194175720215,
-        -0.29221534729003906
+        -55.48619842529297,
+        -48.4278564453125,
+        -28.380340576171875
       ],
       "type": "VEC3"
     },
@@ -76,14 +76,14 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        0.998643696308136,
-        0.9999916553497314,
-        0.9999052286148071
+        0.9987512826919556,
+        0.9935778379440308,
+        1.0
       ],
       "min": [
-        -0.9998558759689331,
-        -0.9999534487724304,
-        -0.9999882578849792
+        -1.0,
+        -1.0,
+        -0.9999999403953552
       ],
       "type": "VEC3"
     },
@@ -93,53 +93,53 @@
       "componentType": 5126,
       "count": 65532,
       "max": [
-        0.9998369812965393,
-        0.9998369812965393
+        0.6473820209503174,
+        0.7084619998931885
       ],
       "min": [
-        0.0001630000042496249,
-        0.666828989982605
+        0.0662200003862381,
+        0.02741900086402893
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
-      "byteOffset": 1174416,
+      "byteOffset": 1464192,
       "componentType": 5125,
-      "count": 250185,
+      "count": 363471,
       "type": "SCALAR"
     },
     {
       "bufferView": 2,
       "byteOffset": 3145536,
       "componentType": 5126,
-      "count": 16099,
+      "count": 65532,
       "max": [
-        15.467985153198242,
-        8.407649040222168,
-        21.00117301940918
+        24.755908966064453,
+        14.293846130371094,
+        27.667648315429688
       ],
       "min": [
-        -17.088258743286133,
-        -7.555609703063965,
-        -0.16139984130859375
+        -55.6183967590332,
+        -38.97959899902344,
+        -30.852876663208008
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 3338724,
+      "byteOffset": 3931920,
       "componentType": 5126,
-      "count": 16099,
+      "count": 65532,
       "max": [
-        0.9986653923988342,
-        0.9998523592948914,
-        0.9994303584098816
+        1.0,
+        1.0,
+        1.0
       ],
       "min": [
-        -0.9999073147773743,
-        -0.9999923706054688,
-        -0.9999633431434631
+        -0.9999771118164063,
+        -0.999942421913147,
+        -1.0
       ],
       "type": "VEC3"
     },
@@ -147,54 +147,110 @@
       "bufferView": 1,
       "byteOffset": 1048512,
       "componentType": 5126,
-      "count": 16099,
+      "count": 65532,
       "max": [
-        0.9998369812965393,
-        0.9998369812965393
+        0.6478059887886047,
+        0.9966800212860107
       ],
       "min": [
-        0.0001630000042496249,
-        0.33349600434303284
+        0.039618998765945435,
+        0.4606490135192871
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
-      "byteOffset": 2175156,
+      "byteOffset": 2918076,
       "componentType": 5125,
-      "count": 56211,
+      "count": 345327,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 4718304,
+      "componentType": 5126,
+      "count": 61792,
+      "max": [
+        24.84861183166504,
+        14.489333152770996,
+        30.614538192749023
+      ],
+      "min": [
+        -55.48619842529297,
+        -48.15375900268555,
+        -30.832353591918945
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5459808,
+      "componentType": 5126,
+      "count": 61792,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999866485595703,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 61792,
+      "max": [
+        0.6434320211410522,
+        0.9992560148239136
+      ],
+      "min": [
+        0.0007440000190399587,
+        0.026280999183654785
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4299384,
+      "componentType": 5125,
+      "count": 263190,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "EDUROCK – EDUCATIONAL VIRTUAL ROCK COLLECTION (https://sketchfab.com/EDUROCK_AALTO)",
+      "author": "RISD Nature Lab (https://sketchfab.com/RISDNaturelab)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/tourmaline-4573328e166740c7a68cd7782ada6510",
-      "title": "Tourmaline"
+      "source": "https://sketchfab.com/3d-models/black-tourmaline-embedded-in-quartz-2fe4e55b831c4403b9654be73753df29",
+      "title": "Black Tourmaline Embedded in Quartz"
     },
-    "generator": "Sketchfab-12.68.0",
+    "generator": "Sketchfab-15.25.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 2400000,
+      "byteLength": 5352144,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 1177304,
-      "byteOffset": 2400000,
+      "byteLength": 2067104,
+      "byteOffset": 5352144,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 3531912,
-      "byteOffset": 3577304,
+      "byteLength": 6201312,
+      "byteOffset": 7419248,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -202,7 +258,7 @@
   ],
   "buffers": [
     {
-      "byteLength": 7109216,
+      "byteLength": 13620560,
       "uri": "scene.bin"
     }
   ],
@@ -211,7 +267,7 @@
   ],
   "images": [
     {
-      "uri": "textures/model_Material_u1_v1_baseColor.jpeg"
+      "uri": "textures/material_0_baseColor.png"
     }
   ],
   "materials": [
@@ -220,7 +276,7 @@
       "extensions": {
         "KHR_materials_unlit": {}
       },
-      "name": "model_Material_u1_v1",
+      "name": "material_0",
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
@@ -274,6 +330,21 @@
           "mode": 4
         }
       ]
+    },
+    {
+      "name": "Object_3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 0,
+          "mode": 4
+        }
+      ]
     }
   ],
   "nodes": [
@@ -282,17 +353,17 @@
         1
       ],
       "matrix": [
-        0.012500000186264515,
+        1.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        2.775557602921922e-18,
-        -0.012500000186264515,
+        2.220446049250313e-16,
+        -1.0,
         0.0,
         0.0,
-        0.012500000186264515,
-        2.775557602921922e-18,
+        1.0,
+        2.220446049250313e-16,
         0.0,
         0.0,
         0.0,
@@ -305,9 +376,10 @@
       "children": [
         2,
         3,
-        4
+        4,
+        5
       ],
-      "name": "model.obj.cleaner.materialmerger.gles"
+      "name": "decimated black tourmaline.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
@@ -320,6 +392,10 @@
     {
       "mesh": 2,
       "name": "Object_4"
+    },
+    {
+      "mesh": 3,
+      "name": "Object_5"
     }
   ],
   "samplers": [

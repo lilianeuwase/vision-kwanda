@@ -18,7 +18,7 @@ export default function MineralsIntro() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">
-              Everything about minerals in Rwanda
+              Key potentials minerals in Rwanda
             </h1>
             <p className="mt-8 text-lg font-medium text-pretty sm:text-xl/8">
               Rwanda hosts rich mineral resources like coltan, cassiterite, wolfram,

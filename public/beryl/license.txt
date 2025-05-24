@@ -1,11 +1,11 @@
 Model Information:
-* title:	Beryl
-* source:	https://sketchfab.com/3d-models/beryl-4a5d5cfc18114d45bdae1b900a12639a
-* author:	The Watt Institution (https://sketchfab.com/wattinstitution)
+* title:	beryl 9-11
+* source:	https://sketchfab.com/3d-models/beryl-9-11-8a69f45e6ac94b72a034b341b58e60ac
+* author:	rocksandminerals (https://sketchfab.com/rocksandminerals)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Beryl" (https://sketchfab.com/3d-models/beryl-4a5d5cfc18114d45bdae1b900a12639a) by The Watt Institution (https://sketchfab.com/wattinstitution) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "beryl 9-11" (https://sketchfab.com/3d-models/beryl-9-11-8a69f45e6ac94b72a034b341b58e60ac) by rocksandminerals (https://sketchfab.com/rocksandminerals) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

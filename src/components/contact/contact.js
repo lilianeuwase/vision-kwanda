@@ -16,10 +16,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_templateID", // ⬅️ replace with your real Service ID
-        "template_templateID", // ⬅️ replace with your real Template ID
+        "service_gxmghtm", // ⬅️ replace with your real Service ID
+        "template_j8ioi7o", // ⬅️ replace with your real Template ID
         formRef.current,
-        "your_public_key" // ⬅️ replace with your EmailJS Public Key
+        "GerX4-biGLWSnEEGE" // ⬅️ replace with your EmailJS Public Key
       )
       .then(
         () => {
@@ -91,14 +91,14 @@ export default function ContactForm() {
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 />
               </div>
-              <div>
+              {/* <div>
                 <label className="font-medium">Company</label>
                 <input
                   name="user_company"
                   type="text"
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 />
-              </div>
+              </div> */}
               <div>
                 <label className="font-medium">Message</label>
                 <textarea
@@ -115,7 +115,7 @@ export default function ContactForm() {
               </button>
               {isSent && (
                 <p className="text-green-600 mt-2">
-                  ✅ Message sent successfully!
+                  ✅ Message sent successfully! We will get back to you
                 </p>
               )}
             </form>

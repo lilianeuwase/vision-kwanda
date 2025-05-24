@@ -1,11 +1,11 @@
 Model Information:
-* title:	Black Stone Material Study
-* source:	https://sketchfab.com/3d-models/black-stone-material-study-d0b008f3e69245be8c654d82b35aaac8
-* author:	Kafu Dev (https://sketchfab.com/kafutschga)
+* title:	Unknown Mineral
+* source:	https://sketchfab.com/3d-models/unknown-mineral-c383ff12eb504670ba43fb9ffd7b966d
+* author:	University of Houston - Geoscience Learning Center (https://sketchfab.com/GLC-UHEAS)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Black Stone Material Study" (https://sketchfab.com/3d-models/black-stone-material-study-d0b008f3e69245be8c654d82b35aaac8) by Kafu Dev (https://sketchfab.com/kafutschga) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Unknown Mineral" (https://sketchfab.com/3d-models/unknown-mineral-c383ff12eb504670ba43fb9ffd7b966d) by University of Houston - Geoscience Learning Center (https://sketchfab.com/GLC-UHEAS) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

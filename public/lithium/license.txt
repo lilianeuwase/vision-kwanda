@@ -1,11 +1,11 @@
 Model Information:
-* title:	Lepidolite
-* source:	https://sketchfab.com/3d-models/lepidolite-405922e76c4f4161860cb4d79ad7654f
-* author:	The Watt Institution (https://sketchfab.com/wattinstitution)
+* title:	Minéral - Spodumène
+* source:	https://sketchfab.com/3d-models/mineral-spodumene-5ee991f1cf974e5f95f8e4c8e3de32f0
+* author:	Société Géologique de France (https://sketchfab.com/sgfrance)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Lepidolite" (https://sketchfab.com/3d-models/lepidolite-405922e76c4f4161860cb4d79ad7654f) by The Watt Institution (https://sketchfab.com/wattinstitution) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Minéral - Spodumène" (https://sketchfab.com/3d-models/mineral-spodumene-5ee991f1cf974e5f95f8e4c8e3de32f0) by Société Géologique de France (https://sketchfab.com/sgfrance) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

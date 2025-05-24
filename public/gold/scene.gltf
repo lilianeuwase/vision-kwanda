@@ -3,164 +3,123 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 487,
+      "count": 3906,
       "max": [
-        6.1083855628967285,
-        9.108696937561035,
-        5.238795280456543
+        2.597409963607788,
+        1.2430740594863892,
+        5.118811130523682
       ],
       "min": [
-        -5.839519023895264,
-        -0.7303546667098999,
-        -8.546191215515137
+        -2.597409963607788,
+        -1.2459690570831299,
+        -5.118811130523682
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 5844,
+      "byteOffset": 46872,
       "componentType": 5126,
-      "count": 487,
+      "count": 3906,
       "max": [
-        0.9914116263389587,
-        0.9972653388977051,
-        0.9945970177650452
+        1.0,
+        1.0,
+        1.0
       ],
       "min": [
-        -0.9992662668228149,
-        -0.9994735717773438,
-        -0.9977216124534607
+        -1.0,
+        -0.9999884963035583,
+        -1.0
       ],
       "type": "VEC3"
     },
     {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 487,
-      "max": [
-        0.8415204286575317,
-        0.8213686347007751,
-        0.9956956505775452,
-        1.0
-      ],
-      "min": [
-        -0.9792044758796692,
-        -0.9991645216941833,
-        -0.9904106855392456,
-        1.0
-      ],
-      "type": "VEC4"
-    },
-    {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 487,
+      "count": 3906,
       "max": [
-        0.9980990886688232,
-        0.996099591255188
+        0.9980078935623169,
+        0.9980080127716064
       ],
       "min": [
-        0.001895129680633545,
-        0.0018988036317750812
+        0.001836907584220171,
+        0.0
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 2304,
+      "count": 10410,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Harri Snellman (https://sketchfab.com/rivetech)",
+      "author": "alex.yefremov (https://sketchfab.com/alex.yefremov)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/gold-nugget-5ccc72d43f0e4dc5ad5ef8eeb93cf3b0",
-      "title": "Gold Nugget"
+      "source": "https://sketchfab.com/3d-models/gold-bar-87e4e0a9da7f4c8a9561a932d09279bd",
+      "title": "gold bar"
     },
-    "generator": "Sketchfab-12.68.0",
+    "generator": "Sketchfab-14.13.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 9216,
+      "byteLength": 41640,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 3896,
-      "byteOffset": 9216,
+      "byteLength": 31248,
+      "byteOffset": 41640,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 11688,
-      "byteOffset": 13112,
+      "byteLength": 93744,
+      "byteOffset": 72888,
       "byteStride": 12,
-      "name": "floatBufferViews",
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 7792,
-      "byteOffset": 24800,
-      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 32592,
+      "byteLength": 166632,
       "uri": "scene.bin"
-    }
-  ],
-  "images": [
-    {
-      "uri": "textures/GoldNugget_baseColor.png"
-    },
-    {
-      "uri": "textures/GoldNugget_metallicRoughness.png"
-    },
-    {
-      "uri": "textures/GoldNugget_normal.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "GoldNugget",
-      "normalTexture": {
-        "index": 2
-      },
+      "name": "VRayMtl1",
       "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        },
-        "metallicRoughnessTexture": {
-          "index": 1
-        },
-        "roughnessFactor": 0.3300393995220984
+        "baseColorFactor": [
+          1.0,
+          0.6795424696330938,
+          0.0,
+          1.0
+        ],
+        "roughnessFactor": 0.18475942021918546
       }
     }
   ],
   "meshes": [
     {
-      "name": "GoldNugget_GoldNugget_0",
+      "name": "pCube2_VRayMtl1_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3
+            "TEXCOORD_0": 2
           },
-          "indices": 4,
+          "indices": 3,
           "material": 0,
           "mode": 4
         }
@@ -214,7 +173,7 @@
         0.0,
         1.0
       ],
-      "name": "07fb29b16c254d99b0ee40eda5b4e15f.fbx"
+      "name": "b3b91a2a07904a7fbefbad3266f9c0d3.fbx"
     },
     {
       "children": [
@@ -226,19 +185,11 @@
       "children": [
         4
       ],
-      "name": "GoldNugget"
+      "name": "pCube2"
     },
     {
       "mesh": 0,
-      "name": "GoldNugget_GoldNugget_0"
-    }
-  ],
-  "samplers": [
-    {
-      "magFilter": 9729,
-      "minFilter": 9987,
-      "wrapS": 10497,
-      "wrapT": 10497
+      "name": "pCube2_VRayMtl1_0"
     }
   ],
   "scene": 0,
@@ -248,20 +199,6 @@
       "nodes": [
         0
       ]
-    }
-  ],
-  "textures": [
-    {
-      "sampler": 0,
-      "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
     }
   ]
 }

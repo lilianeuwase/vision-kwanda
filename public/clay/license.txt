@@ -1,11 +1,11 @@
 Model Information:
-* title:	Clay Brick
-* source:	https://sketchfab.com/3d-models/clay-brick-adc8de4f9d4a4091bf5b5dedf45fcba4
-* author:	Världskulturmuseerna (https://sketchfab.com/varldskulturmuseerna)
+* title:	Pile of bricks 03
+* source:	https://sketchfab.com/3d-models/pile-of-bricks-03-3eb70d8fd07e4d1fb695819f3e73e6bc
+* author:	yaro.pro (https://sketchfab.com/yaro.pro)
 
 Model License:
-* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
-* requirements:	Author must be credited. No commercial use.
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Clay Brick" (https://sketchfab.com/3d-models/clay-brick-adc8de4f9d4a4091bf5b5dedf45fcba4) by Världskulturmuseerna (https://sketchfab.com/varldskulturmuseerna) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+This work is based on "Pile of bricks 03" (https://sketchfab.com/3d-models/pile-of-bricks-03-3eb70d8fd07e4d1fb695819f3e73e6bc) by yaro.pro (https://sketchfab.com/yaro.pro) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

@@ -7,7 +7,7 @@ export default function Intro() {
       {/* Hero Text - Responsive + High z-index */}
       <div className="absolute top-1/3 left-[10%] sm:left-[15%] md:left-[20%] max-w-[600px] z-20 px-4 text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
-       Want Exceptional Service?
+       Want Our Exceptional Service?
         </h1>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mt-4">
           Get In.

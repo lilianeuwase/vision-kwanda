@@ -33,6 +33,7 @@ export default function Scene({ models, descriptions }) {
                   label={label}
                   ModelComponent={ModelComponent}
                   modelScale={scale}
+                  
                 />
                 <Annotation
                   start={[0, -0.2, 0]}
@@ -40,6 +41,7 @@ export default function Scene({ models, descriptions }) {
                   end={[2.5, 0.5, 0]}
                   text={descriptions[label]}
                   textPos={[3, 0.5, 0]}
+                  
                 />
               </>
             )}
