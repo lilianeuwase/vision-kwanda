@@ -14,8 +14,8 @@ export default function Scene({ models, descriptions }) {
 
   return (
     <>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} />
+      <ambientLight intensity={1} />
+      <directionalLight position={[10, 10, 10]} intensity={1.5}/>
       {order.map((label, i) => {
         const positionY = -i * vh;
         const scrollY = scroll.offset * order.length * vh;
